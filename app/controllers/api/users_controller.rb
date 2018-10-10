@@ -16,18 +16,21 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-  end
-
-  def update
-    if @user == current_user
-      if @user.update(user_params)
-
-      else
-        flash.now[:errors] = @user.errors.full_messages
-    else
-      render :show
+    if @user
+      render "api/users/show"
     end
   end
+
+  # def update
+  #   if @user == current_user
+  #     if @user.update(user_params)
+  #
+  #     else
+  #       flash.now[:errors] = @user.errors.full_messages
+  #   else
+  #     render :show
+  #   end
+  # end
 
   def user_params
     params.require(:user).permit(:email,:password)

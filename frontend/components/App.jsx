@@ -7,6 +7,7 @@ import {
   Link,
   HashRouter
 } from 'react-router-dom';
+import NavBarContainer from './nav_bar/nav_bar_container'
 
 const App = () => (
   <div>
@@ -14,6 +15,7 @@ const App = () => (
       <Link to="/" className="header-link">
       <h1>TuneShack</h1>
       </Link>
+      <NavBarContainer />
     </header>
   </div>
 );

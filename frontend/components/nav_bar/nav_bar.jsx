@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-export default ({ currentUser, currentEmail, logout }) => {
+export default ({ currentUser, logout }) => {
   // debugger
-  const display = currentUser ? (
+  const display = currentUser.id !== null ? (
     <div>
-      <p>Hello, {currentEmail}</p>
+      <p>Hello, {currentUser.email}</p>
       <button onClick={logout}>Log out</button>
     </div>
 

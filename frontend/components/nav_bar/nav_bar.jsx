@@ -18,7 +18,7 @@ class NavBar extends React.Component{
     let display;
     if (this.props.id === null){
       display = (
-          <ul>
+          <ul className="nav-ul-right">
             <li>
               <Link className="btn" to="/signup">sign up</Link>
             </li>
@@ -33,7 +33,7 @@ class NavBar extends React.Component{
         }
         else{
           display = (
-            <ul>
+            <ul className="nav-ul-right">
               <li>
                 <Link to="/" className="btn">discover</Link>
               </li>
@@ -45,13 +45,13 @@ class NavBar extends React.Component{
       }
 
     const username = this.props.id !== null ? (
-      <ul>
+      <ul className="nav-ul-left">
         <li className="nav-greetings">Hello, {this.props.currentUser.email}</li>
         <li><Link to="/" className="btn">feed</Link></li>
         <li><Link to="/" className="btn">collection</Link></li>
       </ul>
     ) : (
-      <ul></ul>
+      <ul className="nav-ul-left"></ul>
     )
 
     return (
@@ -73,7 +73,7 @@ class NavBar extends React.Component{
           <section className="nav-right">
             <section className="nav-right-search">
               <form className="search-bar" value="">
-                <label>This will be where search bar goes</label>
+                <label>search bar</label>
                 <input type="text"></input>
               </form>
             </section>

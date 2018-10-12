@@ -33,3 +33,7 @@ export const signup = user => dispatch => {
 export const logout = () => dispatch => {
   return APIUtil.logout().then(user => dispatch(logoutCurrentUser()))
 }
+
+export const fetchUser = id => dispatch => {
+  return APIUtil.fetchUser(id).then(user => dispatch(receiveCurrentUser(user)))
+};

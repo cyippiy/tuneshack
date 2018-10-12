@@ -5,10 +5,6 @@ import NavBar from './nav_bar';
 import { logout, fetchUser } from '../../actions/session_actions';
 
 const mapStateToProps = state => {
-  // currentUser: {
-  //   id: state.session.id,
-  //   email: state.session.email
-  // }
   return({
     currentUser: state.entities.users[state.session.id],
     id: state.session.id

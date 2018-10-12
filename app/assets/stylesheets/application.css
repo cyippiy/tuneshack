@@ -33,21 +33,21 @@
    flex-direction: row;
  }
 
-.nav-right li{
+.nav-bar li{
     display: inline-block;
     padding: 10px;
     margin-left: 10px;
     border-left: 1px solid grey;
 }
 
-.nav-right li:first-child{
+.nav-bar li:first-child{
   border-left: 0;
 }
 
 header{
   display: flex;
   margin: 0 auto;
-  /* background-color: yellow; */
+  background-color: yellow;
   font-family: 'Helvetica', sans-serif;
   font-weight: bold;
   font-size: 14px;
@@ -74,27 +74,53 @@ header{
 .nav-left{
   height: 100%;
   width: 50%;
-  display: block;
+  display: flex;
   float: left;
-  /* background-color: green; */
+  background-color: green;
   position: relative;
-  align-items: center;
-  padding-top: 20px;
+  flex-direction: column;
 }
+.nav-left-icon{
+  height: 50%;
+  width: 100%;
+  background-color: teal;
+  float:left;
+}
+.nav-left-links{
+  height:50%;
+  width: 100%;
+  background-color: orange;
+  float:right;
+}
+
 
 .nav-right{
   height: 100%;
   width: 30%;
+  display: flex;
+  float: right;
   position: relative;
-  float: left;
-  /* background-color: pink; */
-  display: block;
-  align-items: center;
+  background-color: pink;
+  flex-direction: column;
 }
 
+.nav-right-search{
+  height: 50%;
+  width: 100%;
+  background-color: purple;
+  float:left;
+}
+.nav-right-links{
+  height:50%;
+  width: 100%;
+  background-color: red;
+  float:right;
+}
+
+
 .login-form-container{
-  height: 400px;
   display: flex;
+  margin-top: 150px;
 }
 
 .login-form-box{

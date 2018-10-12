@@ -9,126 +9,82 @@ class NavBar extends React.Component{
 
   componentDidMount(){
     let id = this.props.id;
-    this.props.fetchUser(id);
+    if (id !== null){
+      this.props.fetchUser(id);
+    }
   }
 
   render(){
-    // if (!this.props.currentUser || !this.props.id){
-    //   return null;
-    // }
     let display;
     if (this.props.id === null){
-
-      display = (<div className="nav-links">
-        <li>
-          <Link className="btn" to="/signup">Sign Up</Link>
-        </li>
-        <li>
-          <Link className="btn" to="/login">Log In</Link>
-        </li>
-      </div>)}
+      display = (
+          <ul>
+            <li>
+              <Link className="btn" to="/signup">sign up</Link>
+            </li>
+            <li>
+              <Link className="btn" to="/login">log in</Link>
+            </li>
+          </ul>
+      )}
       else{
         if (!this.props.currentUser){
-          return null;
+          display = (<ul></ul>);
         }
-        display = (<div className="nav-links">
-          <li>
-            <Link className="btn" onClick={()=>this.props.logout()} to="/login">Log Out</Link>
-          </li>
-        </div>)
-      }
-
-
-    // const display = this.props.id !== null ? (
-    //   <div className="nav-links">
-    //     <li>
-    //       <Link className="btn" onClick={logout} to="/login">Log Out</Link>
-    //     </li>
-    //   </div>
-    //
-    // ) : (
-    //   <div className="nav-links">
-    //     <li>
-    //       <Link className="btn" to="/signup">Sign Up</Link>
-    //     </li>
-    //     <li>
-    //       <Link className="btn" to="/login">Log In</Link>
-    //     </li>
-    //   </div>
-    // );
-
-    const username = this.props.id !== null ? (
-      <h3>Hello, {this.props.currentUser.email}</h3>
-    ) : (
-      <h3></h3>
-    )
-
-    return (
-        <section className="nav-bar">
-          <section className="nav-left">
-            <Link to="/" className="header-link">
-              TuneShack
-            </Link>
-              {username}
-          </section>
-          <section className="nav-right">
+        else{
+          display = (
             <ul>
               <li>
                 <Link to="/" className="btn">Discover</Link>
               </li>
-              {display}
+              <li>
+                <Link className="btn" onClick={()=>this.props.logout()} to="/login">log out</Link>
+              </li>
             </ul>
+          )}
+      }
+
+    const username = this.props.id !== null ? (
+      <ul>
+        <li>Hello, {this.props.currentUser.email}</li>
+        <li><Link to="/" className="btn">feed</Link></li>
+        <li><Link to="/" className="btn">collection</Link></li>
+      </ul>
+    ) : (
+      <ul></ul>
+    )
+
+    return (
+        <section className="nav-bar">
+
+          <section className="nav-left">
+            <section className="nav-left-icon">
+              <Link to="/" className="header-link">
+                TuneShack
+              </Link>
+            </section>
+
+            <section className="nav-left-links">
+              {username}
+            </section>
+          </section>
+
+
+          <section className="nav-right">
+            <section className="nav-right-search">
+              <form className="search-bar" value="">
+                <label>This will be where search bar goes</label>
+                <input type="text"></input>
+              </form>
+            </section>
+
+            <section className="nav-right-links">
+                {display}
+            </section>
           </section>
         </section>
     );
   }
 }
-
-
-// const NavBar = ({ currentUser, logout }) => {
-//   // debugger
-//   const display = currentUser.id !== null ? (
-//     <div className="nav-links">
-//       <li>
-//         <Link className="btn" onClick={logout} to="/login">Log Out</Link>
-//       </li>
-//     </div>
-//
-//   ) : (
-//     <div className="nav-links">
-//       <li>
-//         <Link className="btn" to="/signup">Sign Up</Link>
-//       </li>
-//       <li>
-//         <Link className="btn" to="/login">Log In</Link>
-//       </li>
-//     </div>
-//   );
-//
-//   const username = currentUser.id !== null ? (
-//     <h3>Hello, {currentUser.email}</h3>
-//   ) : (
-//     <h3></h3>
-//   )
-//
-//   return (
-//       <section className="nav-bar">
-//         <section className="nav-left">
-//           <Link to="/" className="header-link">
-//             TuneShack
-//           </Link>
-//             {username}
-//         </section>
-//         <section className="nav-right">
-//           <ul>
-//             <li>
-//               <Link to="/" className="btn">Discover</Link>
-//             </li>
-//             {display}
-//           </ul>
-//         </section>
-//       </section>
-//   );
-// };
 
 export default NavBar;

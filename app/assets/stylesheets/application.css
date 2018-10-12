@@ -35,7 +35,7 @@
 
 .nav-bar li{
     display: inline-block;
-    padding: 10px;
+    padding: 0 0 0 10px;
     margin-left: 10px;
     border-left: 1px solid grey;
 }
@@ -44,10 +44,15 @@
   border-left: 0;
 }
 
+.nav-greetings{
+  color: grey;
+  font-weight: normal;
+}
+
 header{
   display: flex;
-  margin: 0 auto;
-  background-color: yellow;
+  margin: auto;
+  /* background-color: yellow; */
   font-family: 'Helvetica', sans-serif;
   font-weight: bold;
   font-size: 14px;
@@ -56,7 +61,7 @@ header{
   top: 0;
   width: 100%;
   min-width: 600px;
-  border-bottom: 1px solid black;
+  border: 1 solid grey;
 }
 .nav-bar{
   display: flex;
@@ -76,23 +81,29 @@ header{
   width: 50%;
   display: flex;
   float: left;
-  background-color: green;
+  /* background-color: green; */
   position: relative;
   flex-direction: column;
 }
 .nav-left-icon{
   height: 50%;
   width: 100%;
-  background-color: teal;
+  /* background-color: teal; */
+  display:flex;
   float:left;
 }
+
+.header-link{
+  margin: auto 60px;
+
+}
+
 .nav-left-links{
   height:50%;
   width: 100%;
-  background-color: orange;
-  float:right;
+  /* background-color: orange; */
+  float:left;
 }
-
 
 .nav-right{
   height: 100%;
@@ -100,21 +111,30 @@ header{
   display: flex;
   float: right;
   position: relative;
-  background-color: pink;
+  /* background-color: pink; */
   flex-direction: column;
 }
 
 .nav-right-search{
   height: 50%;
   width: 100%;
-  background-color: purple;
+  /* background-color: purple; */
   float:left;
+  display:flex;
+}
+
+.search-bar{
+  margin: auto;
+  display:inline-block;
+  align-items: center;
+  text-align: center;
 }
 .nav-right-links{
   height:50%;
   width: 100%;
-  background-color: red;
-  float:right;
+  /* background-color: red; */
+  float: left;
+  align-content: flex-start;
 }
 
 

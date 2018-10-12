@@ -35,7 +35,7 @@ class NavBar extends React.Component{
           display = (
             <ul>
               <li>
-                <Link to="/" className="btn">Discover</Link>
+                <Link to="/" className="btn">discover</Link>
               </li>
               <li>
                 <Link className="btn" onClick={()=>this.props.logout()} to="/login">log out</Link>
@@ -46,7 +46,7 @@ class NavBar extends React.Component{
 
     const username = this.props.id !== null ? (
       <ul>
-        <li>Hello, {this.props.currentUser.email}</li>
+        <li className="nav-greetings">Hello, {this.props.currentUser.email}</li>
         <li><Link to="/" className="btn">feed</Link></li>
         <li><Link to="/" className="btn">collection</Link></li>
       </ul>

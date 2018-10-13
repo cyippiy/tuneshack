@@ -38,6 +38,10 @@ class SessionForm extends React.Component {
     );
   }
 
+  componentWillUnmount(){
+    this.props.clearError();
+  }
+
   render () {
     return(
       <div className="login-form-container">
@@ -45,9 +49,10 @@ class SessionForm extends React.Component {
           Welcome to TuneShack!
           <br />
             Please {this.props.formType} or {this.props.navLink}
+            <br />
             {this.renderErrors()}
             <div className="login-form">
-              <br/>
+              <br />
               <label>Username:
                 <input type="text"
                   value={this.state.email}

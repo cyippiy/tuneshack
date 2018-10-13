@@ -16,7 +16,7 @@
 
  body{
      font-family: 'Helvetica', sans-serif;
-     background-color: grey;
+     background-color: #F0F0F0;
  }
 
  header a, a:visited, a:active{
@@ -74,7 +74,7 @@ header{
   top: 0;
   width: 100%;
   min-width: 600px;
-  border: 1 solid grey;
+  border-bottom: 1px white;
 }
 .nav-bar{
   display: flex;
@@ -89,34 +89,39 @@ header{
   width: 50%;
   display: flex;
   float: left;
-  background-color: green;
+  /* background-color: green; */
   position: relative;
   flex-direction: column;
 }
 .nav-left-icon{
   height: 50%;
   width: 100%;
-  background-color: teal;
+  /* background-color: teal; */
   display:flex;
   float:left;
 }
 
 .header-link{
-  margin: auto 5%;
+  margin: auto 3%;
 }
 
 .nav-ul-left{
-  margin: auto 5%;
+  /* margin: 0 5%; */
+  justify-content: flex-start;
 }
 .nav-ul-right{
-
+  justify-content: flex-end;
+  margin-right: 5%;
 }
 
+.nav-left-icon{
+  justify-content: flex-start;
+}
 
 .nav-left-links{
   height:50%;
   width: 100%;
-  background-color: orange;
+  /* background-color: orange; */
   display: flex;
   float:left;
   margin: auto;
@@ -126,10 +131,14 @@ header{
   height: 100%;
   width: 30%;
   display: flex;
-  float: right;
+  float: left;
   /* position: relative; */
-  background-color: pink;
+  /* background-color: pink; */
   flex-direction: column;
+}
+
+.nav-right form{
+  margin-right: 2%;
 }
 
 .nav-right-search{
@@ -138,22 +147,27 @@ header{
   /* background-color: purple; */
   float:left;
   display:flex;
+  /* flex-direction: row-reverse;; */
+  justify-content: flex-end;
+}
+.search-bar{
+  /* justify-content: flex-end */
+  margin: auto 0;
+  display:inline-block;
+  align-content: flex-end;
+  /* text-align: center; */
 }
 
 .nav-right-links{
   height:50%;
   width: 100%;
-  background-color: red;
+  /* background-color: red; */
   float: left;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   /* align-content: flex-end; */
 }
 
-.search-bar{
-  margin: auto;
-  display:inline-block;
-  align-items: center;
-  text-align: center;
-}
 
 
 .login-form-container{

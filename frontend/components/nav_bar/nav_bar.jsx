@@ -1,5 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Switch, Route } from 'react-router-dom';
+import { AuthRoute } from '../../util/route_util';
+import LoginFormContainer from '../session_form/login_form_container';
+import SignupFormContainer from '../session_form/signup_form_container';
+import HomeContainer from '../home.jsx'
+
 
 class NavBar extends React.Component{
   constructor(props){
@@ -43,10 +48,18 @@ class NavBar extends React.Component{
             </ul>
           )}
       }
-
+    let greeting;
+    if (this.props.id !== null){
+      if (this.props.currentUser.band_name !== null){
+        greeting = this.props.currentUser.band_name;
+      }
+      else{
+        greeting = this.props.currentUser.email;
+      }
+    }
     const username = this.props.id !== null ? (
       <ul className="nav-ul-left">
-        <li className="nav-greetings">Hello, {this.props.currentUser.email}</li>
+        <li className="nav-greetings">Hello, {greeting}</li>
         <li><Link to="/" className="btn">feed</Link></li>
         <li><Link to="/" className="btn">collection</Link></li>
       </ul>
@@ -73,8 +86,7 @@ class NavBar extends React.Component{
           <section className="nav-right">
             <section className="nav-right-search">
               <form className="search-bar" value="">
-                <label>search bar</label>
-                <input type="text"></input>
+                <input type="text" placeholder="search bar"></input>
               </form>
             </section>
 

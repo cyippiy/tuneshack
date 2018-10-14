@@ -3,6 +3,7 @@ import {
   withRouter
 } from 'react-router-dom';
 import merge from 'lodash/merge';
+import NavBarContainer from '../nav_bar/nav_bar_container';
 
 class SessionForm extends React.Component {
 
@@ -44,7 +45,11 @@ class SessionForm extends React.Component {
 
   render () {
     return(
+
       <div className="login-form-container">
+        <header>
+          <NavBarContainer />
+        </header>
         <form onSubmit={this.handleSubmit} className="login-form-box">
           <p>Please {this.props.formType} or {this.props.navLink}</p>
             <br />

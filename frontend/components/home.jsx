@@ -1,5 +1,4 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import {
   Route,
   Redirect,
@@ -11,19 +10,23 @@ import {
 import NavBarContainer from './nav_bar/nav_bar_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
-import Home from './home.jsx'
 import { AuthRoute } from '../util/route_util';
 
 
-const App = () => {
-  return(
-    <div>
-        <Home />
+class Home extends React.Component{
+  render(){
+    return (
+      <div>
+        <header>
+          <NavBarContainer />
+        </header>
         <Switch>
-          <Route expact path="/" component={Home} />
+          <AuthRoute exact path="/login" component={LoginFormContainer} />
+          <AuthRoute exact path="/signup" component={SignupFormContainer} />
         </Switch>
-    </div>
-  )
-};
+      </div>
+    );
+  }
+}
 
-export default App;
+export default Home;

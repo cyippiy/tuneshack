@@ -204,6 +204,7 @@ header{
 }
 .login-fields label{
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .login-form-box p{
@@ -223,4 +224,8 @@ header{
 
 .line-break {
   border-bottom: 1px dashed lightgrey;
+}
+
+.login-form-box a{
+  text-decoration: underline;
 }

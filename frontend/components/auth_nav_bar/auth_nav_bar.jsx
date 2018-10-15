@@ -38,7 +38,7 @@ class AuthNavBar extends React.Component{
         </section>
 
         <section className="auth-nav-right">
-          <ul>
+          <ul className="auth-nav-ul-right">
             <li>
               <Link to="/profile" className="btn">{greeting}</Link>
             </li>

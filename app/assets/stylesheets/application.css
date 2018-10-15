@@ -271,15 +271,18 @@ h1{
 
 .auth-nav-right{
   height: 100%;
-  flex-direction: row;
-  justify-content: flex-end;
   display: flex;
+  float: left;
+  align-items: center;
+  /* flex-direction: column;
+  justify-content: center; */
 }
 
 .auth-nav-right a{
   align-items: center;
   padding: 10px;
   border-left: 1px solid lightgrey;
+  text-align: center;
 }
 .auth-nav-right .dropdown button{
   align-items: center;
@@ -321,4 +324,13 @@ h1{
 
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
+}
+
+.user-profile{
+  margin-top: 75px;
+}
+
+.auth-nav-ul-right{
+  justify-content: center;
+  margin-right: 5%;
 }

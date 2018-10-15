@@ -12,18 +12,46 @@ class AuthNavBar extends React.Component{
   }
 
   render(){
+    let greeting = " ";
+    if (this.props.id !== null){
+      if (this.props.currentUser.band_name !== null){
+        greeting = this.props.currentUser.band_name;
+      }
+      else{
+        greeting = this.props.currentUser.email;
+      }
+    }
+
     return (
       <header className="auth-nav-bar">
-        <Link to="/" className="auth-header-link">
-          TuneShack
-        </Link>
-        <ul>
-          <li><Link to="/profile" className="btn">collection</Link></li>
-          <li><Link to="/profile" className="btn">feed</Link></li>
-          <li><form className="search-bar" value="">
-            <input type="text" placeholder="search bar"></input>
-          </form></li>
-        </ul>
+        <section className="auth-nav-left">
+          <Link to="/" className="auth-header-link">
+            TuneShack
+          </Link>
+          <ul>
+            <li><Link to="/profile" className="btn">discover</Link></li>
+            <li><Link to="/profile" className="btn">feed</Link></li>
+            <li><form className="search-bar" value="">
+              <input type="text" placeholder="search bar"></input>
+            </form></li>
+          </ul>
+        </section>
+
+        <section className="auth-nav-right">
+          <ul>
+            <li>
+              <Link to="/profile" className="btn">{greeting}</Link>
+            </li>
+            <li>
+              <div class="dropdown">
+                <button class="dropbtn">Gear</button>
+                <div className="dropdown-content">
+                  <Link to="/" className="btn" onClick={()=>this.props.logout()}>log out</Link>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
       </header>
     )
   }

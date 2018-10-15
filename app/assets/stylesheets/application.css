@@ -294,7 +294,7 @@ h1{
 .dropdown-content{
   display: none;
   position: absolute;
-  z-index=2;
+  z-index: 2;
 }
 
 .dropdown-content a {

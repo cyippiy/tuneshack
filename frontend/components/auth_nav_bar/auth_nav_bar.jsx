@@ -8,15 +8,25 @@ class AuthNavBar extends React.Component{
   }
 
   componentDidMount(){
-    let id = this.props.id;
-    if (id !== null){
-      this.props.fetchUser(id);
-    }
+    this.props.fetchUser(this.props.id);
   }
 
   render(){
-    
+    return (
+      <header className="auth-nav-bar">
+        <Link to="/" className="auth-header-link">
+          TuneShack
+        </Link>
+        <ul>
+          <li><Link to="/profile" className="btn">collection</Link></li>
+          <li><Link to="/profile" className="btn">feed</Link></li>
+          <li><form className="search-bar" value="">
+            <input type="text" placeholder="search bar"></input>
+          </form></li>
+        </ul>
+      </header>
+    )
   }
 }
 
-export default NavBar;
+export default AuthNavBar;

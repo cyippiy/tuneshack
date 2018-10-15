@@ -9,7 +9,6 @@ import HomeContainer from '../home.jsx'
 class NavBar extends React.Component{
   constructor(props){
     super(props);
-    this.state = this.props.currentUser;
   }
 
   componentDidMount(){
@@ -21,6 +20,15 @@ class NavBar extends React.Component{
 
   render(){
     let display;
+    let greeting;
+    if (this.props.id !== null){
+      if (this.props.currentUser.band_name !== null){
+        greeting = this.props.currentUser.band_name;
+      }
+      else{
+        greeting = this.props.currentUser.email;
+      }
+    }
     if (this.props.id === null){
       display = (
           <ul className="nav-ul-right">
@@ -43,25 +51,16 @@ class NavBar extends React.Component{
                 <Link to="/" className="btn">discover</Link>
               </li>
               <li>
-                <Link className="btn" onClick={()=>this.props.logout()} to="/login">log out</Link>
+                <Link to="/" className="btn" onClick={()=>this.props.logout()}>log out</Link>
               </li>
             </ul>
           )}
       }
-    let greeting;
-    if (this.props.id !== null){
-      if (this.props.currentUser.band_name !== null){
-        greeting = this.props.currentUser.band_name;
-      }
-      else{
-        greeting = this.props.currentUser.email;
-      }
-    }
     const username = this.props.id !== null ? (
       <ul className="nav-ul-left">
         <li className="nav-greetings">Hello, {greeting}</li>
-        <li><Link to="/" className="btn">feed</Link></li>
-        <li><Link to="/" className="btn">collection</Link></li>
+        <li><Link to="/profile" className="btn">feed</Link></li>
+        <li><Link to="/profile" className="btn">collection</Link></li>
       </ul>
     ) : (
       <ul className="nav-ul-left"></ul>

@@ -239,3 +239,12 @@ h1{
   margin-top: 150px;
   text-align: center;
 }
+
+.auth-nav-bar{
+  height: 50px;
+  background-color: pink;
+}
+
+.user-profile-body{
+  background-color: lightgrey;
+}

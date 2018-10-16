@@ -23,18 +23,20 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  # def update
-  #   if @user == current_user
-  #     if @user.update(user_params)
-  #
-  #     else
-  #       flash.now[:errors] = @user.errors.full_messages
-  #   else
-  #     render :show
-  #   end
-  # end
+  def update
+    @user = User.find_by(id: params[:id])
+    if @user == current_user
+      if @user.update(user_params)
+        render "api/users/show"
+      else
+        render json: @user.errors.full_messages, status: 401
+      end
+    else
+      render json: @user.errors.full_messages, status: 401
+    end
+  end
 
   def user_params
-    params.require(:user).permit(:email,:password,:photo)
+    params.require(:user).permit(:id, :email,:password,:band_name,:description,:photo)
   end
 end

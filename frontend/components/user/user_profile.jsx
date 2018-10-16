@@ -22,8 +22,6 @@ class UserProfile extends React.Component{
       band_name = this.props.currentUser.band_name;
     }
     let arr = this.props.albums;
-    window.arr = arr;
-    // debugger
     let display = (<section>No albums(</section>);
     if (!arr){
       return null;
@@ -50,7 +48,9 @@ class UserProfile extends React.Component{
           <h3>THIS IS MY PROFILE BODY</h3>
           <h3>Email: {this.props.currentUser.email}</h3>
           <h3>Artist/Band Name: {band_name}</h3>
+          <h3>Description: {this.props.currentUser.description}</h3>
           <h3><strong>Albums</strong></h3>
+          <br />
           {display}
         </section>
       </section>

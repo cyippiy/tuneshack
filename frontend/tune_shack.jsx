@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {signup, login, logout} from './actions/session_actions';
+import {signup, login, logout, editUser, fetchUser} from './actions/session_actions';
 import {fetchAlbums, fetchAlbumsUser, fetchAlbum} from './actions/album_actions';
 import configureStore from './store/store';
 import Root from './components/root';
@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchAlbums = fetchAlbums;
   window.fetchAlbumsUser = fetchAlbumsUser;
   window.fetchAlbum = fetchAlbum;
+  window.editUser = editUser;
+  window.fetchUser = fetchUser;
+
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;

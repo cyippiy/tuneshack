@@ -1,13 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import UserProfile from './user_profile';
+import values from 'lodash/values';
 
 import { logout, fetchUser } from '../../actions/session_actions';
 import { fetchAlbumsUser, fetchAlbum } from '../../actions/album_actions';
 
-const mapStateToProps = state => ({
+
+const mapStateToProps = (state) => ({
   currentUser: state.entities.users[state.session.id],
-  id: state.session.id
+  id: state.session.id,
+  albums: state.entities.albums.albums
 });
 
 const mapDispatchToProps = dispatch => ({

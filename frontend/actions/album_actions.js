@@ -2,7 +2,7 @@ import * as AlbumAPIUtil from '../util/album_api_util';
 import {receiveErrors} from './session_actions';
 
 export const RECEIVE_ALBUM = "RECEIVE_ALBUM";
-export const RECEIVE_ALBUMS = "RECEIVE_ALBUMS"
+export const RECEIVE_ALBUMS = "RECEIVE_ALBUMS";
 
 const receiveAlbums = albums =>{
   return {
@@ -11,7 +11,7 @@ const receiveAlbums = albums =>{
   }
 }
 
-const receiveAlum = album => {
+const receiveAlbum = album => {
   return{
     type: RECEIVE_ALBUM,
     album

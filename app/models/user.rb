@@ -4,6 +4,11 @@ class User < ApplicationRecord
 
   has_one_attached :photo
 
+  has_many :albums,
+  primary_key: :id,
+  foreign_key: :artist_id,
+  class_name: :Album
+
   after_initialize :ensure_session_token
 
   attr_reader :password

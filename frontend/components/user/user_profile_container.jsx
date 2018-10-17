@@ -7,11 +7,13 @@ import { logout, fetchUser } from '../../actions/session_actions';
 import { fetchAlbumsUser, fetchAlbum } from '../../actions/album_actions';
 
 
-const mapStateToProps = (state) => ({
-  currentUser: state.entities.users[state.session.id],
-  id: state.session.id,
-  albums: state.entities.albums.albums
-});
+const mapStateToProps = (state,ownProps) => {
+  // debugger
+  return ({
+    user: state.entities.users[ownProps.match.params.id],
+    id: ownProps.match.params.id,
+    albums: state.entities.albums.albums})
+};
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),

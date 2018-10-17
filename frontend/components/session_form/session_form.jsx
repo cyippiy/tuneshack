@@ -14,6 +14,7 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoClick = this.demoClick.bind(this);
   }
   update(field) {
     return e => this.setState({
@@ -24,6 +25,13 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = merge({},this.state);
+    this.props.processForm(user);
+  }
+
+  demoClick(){
+    document.getElementById("email").value = "chris";
+    document.getElementById("password").value = "111111";
+    const user = merge({},{email: "chris", password: "111111"});
     this.props.processForm(user);
   }
 
@@ -44,6 +52,13 @@ class SessionForm extends React.Component {
   }
 
   render () {
+    let demo;
+    if (this.props.formType === "Log in"){
+      demo = (<button className="session-submit" type="button" onClick={this.demoClick}>Demo Login</button>)
+    }else{
+      demo = (<div></div>)
+    }
+
     return(
 
       <div className="login-form-container">
@@ -64,6 +79,7 @@ class SessionForm extends React.Component {
                   value={this.state.email}
                   onChange={this.update('email')}
                   className="login-input"
+                  id="email"
                   />
                   <br />
                   <label>Password:</label>
@@ -71,11 +87,14 @@ class SessionForm extends React.Component {
                     value={this.state.password}
                     onChange={this.update('password')}
                     className="login-input"
+                    id="password"
                     />
 
               </div>
               <br/>
-              <button className="session-submit" type="submit">{this.props.formType}</button>
+              <button className="session-submit" type="submit" id="btn-submit">{this.props.formType}</button>
+              <br />
+                {demo}
             </div>
         </form>
       </div>

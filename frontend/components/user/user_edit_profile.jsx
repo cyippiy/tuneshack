@@ -64,7 +64,7 @@ class UserEditProfile extends React.Component{
             <input type="text"
               value={this.state.email}
               onChange={this.update("email")} />
-            <label>Artist/Band Name:</label>
+            <label>Name/Artist Name:</label>
             <input type="text"
               value={band_name}
               onChange={this.update("band_name")} />

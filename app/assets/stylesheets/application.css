@@ -158,6 +158,7 @@ header{
   margin: auto 0;
   display:inline-block;
   align-content: flex-end;
+  color: grey;
   /* text-align: center; */
 }
 
@@ -261,7 +262,7 @@ h1{
 .auth-nav-left a{
   align-items: center;
   padding: 10px;
-  border-left: 1px solid lightgrey;
+  /* border-left: 1px solid lightgrey; */
   color: #1DA0C3;
   text-decoration: none;
 }
@@ -274,7 +275,7 @@ h1{
 .auth-nav-left form{
   align-items: center;
   padding: 10px;
-  border-left: 1px solid lightgrey;
+  /* border-left: 1px solid lightgrey; */
 }
 
 .auth-nav-right{
@@ -311,7 +312,7 @@ h1{
 
 .auth-nav-right a{
   padding: 10px;
-  border-left: 1px solid lightgrey;
+  /* border-left: 1px solid lightgrey; */
   text-align: center;
   color: #1DA0C3;
   text-decoration: none;
@@ -329,7 +330,7 @@ h1{
 .auth-nav-right .dropdown button{
   align-items: center;
   padding: 10px;
-  border-left: 1px solid lightgrey;
+  /* border-left: 1px solid lightgrey; */
   color: #1DA0C3
 }
 
@@ -363,12 +364,14 @@ h1{
   background-color: lightgrey;
   color:black;
   border-radius: 1px solid black;
+  border: 2px black;
 }
 
 .dropdown .dropbtn:hover {
   background-color: lightgrey;
   border-radius: 1px solid black;
   color: black;
+  border: 2px black;
 }
 
 .user-profile{

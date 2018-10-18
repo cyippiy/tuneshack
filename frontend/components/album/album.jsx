@@ -2,6 +2,8 @@ import React from 'react';
 import AuthNavBarContainer from '../auth_nav_bar/auth_nav_bar_container';
 import values from 'lodash/values';
 import ReactAudioPlayer from 'react-audio-player';
+import MusicPlayer from '../music_player/music_player'
+
 
 class AlbumDetails extends React.Component{
   constructor(props){

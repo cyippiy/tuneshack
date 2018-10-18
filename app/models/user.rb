@@ -9,7 +9,8 @@ class User < ApplicationRecord
   foreign_key: :artist_id,
   class_name: :Album
 
-  after_initialize :ensure_session_token, :ensure_img
+  after_initialize :ensure_session_token
+  before_save :ensure_img
 
   attr_reader :password
 

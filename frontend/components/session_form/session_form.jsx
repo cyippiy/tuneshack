@@ -31,7 +31,7 @@ class SessionForm extends React.Component {
   demoClick(){
     document.getElementById("email").value = "chris";
     document.getElementById("password").value = "111111";
-    const user = merge({},{email: "chris", password: "111111"});
+    const user = merge({},{email: "chris@korsk.com", password: "111111"});
     this.props.processForm(user);
   }
 

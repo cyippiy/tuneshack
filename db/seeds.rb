@@ -7,11 +7,38 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 
-user=User.new(email:"chris", password: "111111", band_name: "kors k",
+user=User.new(email:"chris@korsk.com", password: "111111", band_name: "Kors K",
 description: "i'm kors k")
-user.save
 path = File.join(Rails.root, 'app', "assets", "images","duetomorrow.jpg")
 user.photo.attach(io: File.open(path), filename: "duetomorrow.jpg")
-# user1=User.create(email:"stef", password: "111111", band_name: "STEF",
-# description: "i'm STEF")
-#
+user.save
+
+user1=User.new(email:"beatsguy@whatever.com", password: "111111", band_name: "Nujabez",
+description: "my beats are sick")
+path = File.join(Rails.root, 'app', "assets", "images","nujabes.jpg")
+user1.photo.attach(io: File.open(path), filename: "nujabes.jpg")
+user1.save
+
+user2=User.new(email:"wavemusic@wavemusic.com", password: "111111", band_name: "Wave Music",
+description: "feels good music")
+path = File.join(Rails.root, 'app', "assets", "images","wavemusic.jpg")
+user2.photo.attach(io: File.open(path), filename: "wavemusic.jpg")
+user2.save
+
+user3=User.new(email:"marsbru@whatever.com", password: "111111", band_name: "Mars Bruno",
+description: "i'm not sacha baron cohen")
+path = File.join(Rails.root, 'app', "assets", "images","brunomars.png")
+user3.photo.attach(io: File.open(path), filename: "brunomars.png")
+user3.save
+
+user4=User.new(email:"elevven@eleveenmusic.com", password: "111111", band_name: "Elevven",
+description: "brown people power")
+path = File.join(Rails.root, 'app', "assets", "images","elevven.png")
+user4.photo.attach(io: File.open(path), filename: "elevven.png")
+user4.save
+
+user5=User.new(email:"rnbking@soullll.com", password: "111111", band_name: "Slow Jams",
+description: "my beats are sick")
+path = File.join(Rails.root, 'app', "assets", "images","soulmusic.jpg")
+user5.photo.attach(io: File.open(path), filename: "soulmusic.jpg")
+user5.save

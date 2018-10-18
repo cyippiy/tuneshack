@@ -60,13 +60,20 @@ class UserProfile extends React.Component{
     if (this.props.user.email){
       email = this.props.user.email;
     }
+    let photo = <img />
+    console.log(this.props.user.photoUrl);
+    if (this.props.user.photoUrl){
+      photo = <img className="profile" src={this.props.user.photoUrl} />
+    }
+
 
     return (
 
       <section className="user-profile">
         <AuthNavBarContainer />
         <section className="user-profile-body">
-          <h3>THIS IS MY PROFILE BODY</h3>
+          <h3>PROFILE</h3>
+          {photo}
           <h3>Email: {email}</h3>
           <h3>Name/Artist Name: {artist}</h3>
           <h3>Description: {description}</h3>

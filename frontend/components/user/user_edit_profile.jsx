@@ -58,21 +58,30 @@ class UserEditProfile extends React.Component{
       <section className="user-profile">
         <AuthNavBarContainer />
         <section className="user-profile-body">
-          <h3>EDIT PROFILE</h3>
-          <form onSubmit={this.handleSubmit}>
-            <label>Email:</label>
-            <input type="text"
-              value={this.state.email}
-              onChange={this.update("email")} />
-            <label>Name/Artist Name:</label>
-            <input type="text"
-              value={band_name}
-              onChange={this.update("band_name")} />
-            <input type="submit" value="edit information" />
-          </form>
-          <h3><strong>Albums</strong></h3>
-          <br />
-          {display}
+          <section className="user-profile-info">
+            <h3>EDIT PROFILE</h3>
+            <form id="profile-form" onSubmit={this.handleSubmit}>
+              <label>Email:</label>
+              <input type="text"
+                value={this.state.email}
+                onChange={this.update("email")} />
+              <label>Name/Artist Name:</label>
+              <input type="text"
+                value={band_name}
+                onChange={this.update("band_name")} />
+              <label>Description</label>
+              <input type="text"
+                value={this.state.description}
+                onChange={this.update("description")} />
+              <br />
+              <input id="btn" type="submit" value="edit information" />
+            </form>
+          </section>
+          <section className="user-profile-albums">
+            <h3><strong>Albums</strong></h3>
+            <br />
+            {display}
+          </section>
         </section>
       </section>
     );

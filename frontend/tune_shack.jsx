@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.editUser = editUser;
   window.fetchUser = fetchUser;
 
-
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 

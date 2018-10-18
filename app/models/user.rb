@@ -9,7 +9,7 @@ class User < ApplicationRecord
   foreign_key: :artist_id,
   class_name: :Album
 
-  after_initialize :ensure_session_token
+  after_initialize :ensure_session_token, :ensure_img
 
   attr_reader :password
 
@@ -43,6 +43,10 @@ class User < ApplicationRecord
   def self.find_by_credentials(email,password)
     user = User.find_by(email: email)
     user && user.is_password?(password) ? user : nil
+  end
+
+  def ensure_img
+    self.photo.attach(io: File.open("/Users/cyip/Documents/app academy/coursework/tuneshack/app/assets/images/Blank-person-photo.png"), filename: "Blank-person-photo.png") unless self.photo.attached?
   end
 
 end

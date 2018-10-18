@@ -22,7 +22,7 @@ export const fetchSongs = () => dispatch => {
   return SongAPIUtil.fetchSongs().then(songs => dispatch(receiveSongs(songs)),
   err => dispatch(receiveErrors(err.responseJSON)))
 }
-export const fetchSongsUser = (id) => dispatch => {
+export const fetchSongsAlbum = (id) => dispatch => {
   return SongAPIUtil.fetchSongsAlbum(id).then(songs => dispatch(receiveSongs(songs)),
   err => dispatch(receiveErrors(err.responseJSON)))
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import AuthNavBarContainer from '../auth_nav_bar/auth_nav_bar_container';
 import values from 'lodash/values';
+import { Link } from 'react-router-dom';
 
 class UserProfile extends React.Component{
   constructor(props){
@@ -40,8 +41,11 @@ class UserProfile extends React.Component{
         arr.map(album => {
           return(
             <section key={album.id}>
-              <h3>Title: {album.title}</h3>
-              <h3>Description: {album.description}</h3>
+              <Link to={`/albums/${album.id}`} className="img">
+                <img src={album.photoUrl} />
+              </Link>
+              <p>Title: {album.title}</p>
+              <p>Description: {album.description}</p>
             </section>
           )
         })

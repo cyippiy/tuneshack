@@ -10,7 +10,7 @@ class User < ApplicationRecord
   class_name: :Album
 
   after_initialize :ensure_session_token
-  before_save :ensure_img
+  # before_save :ensure_img
 
   attr_reader :password
 

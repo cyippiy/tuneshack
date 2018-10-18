@@ -13,7 +13,7 @@ class Album < ApplicationRecord
   class_name: :Song
 
   has_one_attached :photo
-  before_save :ensure_img
+  # before_save :ensure_img
 
   def ensure_img
     path = File.join(Rails.root, 'app', "assets", "images","blankalbum.jpg")

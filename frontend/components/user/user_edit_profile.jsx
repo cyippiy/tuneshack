@@ -2,6 +2,7 @@ import React from 'react';
 import AuthNavBarContainer from '../auth_nav_bar/auth_nav_bar_container';
 import values from 'lodash/values';
 import {withRouter} from 'react-router';
+import { Link } from 'react-router-dom';
 
 class UserEditProfile extends React.Component{
   constructor(props){
@@ -34,7 +35,6 @@ class UserEditProfile extends React.Component{
       band_name = this.state.band_name;
     }
     let arr = this.props.albums;
-    window.arr = arr;
     let display = (<section>No albums(</section>);
     if (!arr){
       return null;
@@ -44,8 +44,11 @@ class UserEditProfile extends React.Component{
         arr.map(album => {
           return(
             <section key={album.id}>
-              <h3>Title: {album.title}</h3>
-              <h3>Description: {album.description}</h3>
+              <Link to={`/albums/${album.id}`} className="img">
+                <img src={album.photoUrl} />
+              </Link>
+              <p>Title: {album.title}</p>
+              <p>Description: {album.description}</p>
             </section>
           )
         })

@@ -30,7 +30,7 @@ class AuthNavBar extends React.Component{
           </Link>
           <ul>
             <li><Link to="/profile" className="btn">discover</Link></li>
-            <li><Link to="/profile" className="btn">feed</Link></li>
+            <li><Link to="/albums" className="btn">feed</Link></li>
             <li><form className="search-bar" value="">
               <input type="text" placeholder="search bar"></input>
             </form></li>

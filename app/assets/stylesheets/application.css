@@ -407,3 +407,7 @@ h1{
   max-height: 100px;
   max-width: 100px;
 }
+
+.song-details{
+  margin-top: 75px;
+}

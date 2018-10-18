@@ -31,7 +31,7 @@ class UserProfile extends React.Component{
       return null;
     }
     let arr = this.props.albums;
-    let display = (<section>No albums(</section>);
+    let display = (<section>No albums</section>);
     if (!arr){
       return null;
     }

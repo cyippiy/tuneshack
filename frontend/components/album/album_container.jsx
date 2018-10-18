@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import AlbumDetails from './album'
 import values from 'lodash/values';
 import { fetchAlbum } from '../../actions/album_actions';
-import { fetchSongs } from '../../actions/song_actions';
+import { fetchSongsAlbum } from '../../actions/song_actions';
 
 const mapStateToProps = (state,ownProps) => {
   return ({
@@ -16,7 +16,7 @@ const mapStateToProps = (state,ownProps) => {
 const mapDispatchToProps = dispatch => {
   return ({
     fetchAlbum: album => dispatch(fetchAlbum(album)),
-    fetchSongs: songs => dispatch(fetchSongs(songs))
+    fetchSongsAlbum: songs => dispatch(fetchSongsAlbum(songs))
   })
 }
 export default connect(mapStateToProps,mapDispatchToProps)(AlbumDetails)

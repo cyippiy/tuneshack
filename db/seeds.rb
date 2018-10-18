@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
+User.reset_pk_sequence
+Album.destroy_all
+Album.reset_pk_sequence
+Song.destroy_all
+Song.reset_pk_sequence
 
 user=User.new(email:"chris@korsk.com", password: "111111", band_name: "Kors K",
 description: "i'm kors k")

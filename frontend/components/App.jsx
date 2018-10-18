@@ -13,6 +13,7 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import UserProfileContainer from './user/user_profile_container';
 import UserEditProfileContainer from './user/user_edit_profile_container';
+import AlbumDetailsContainer from './album/album_container';
 import Home from './home.jsx';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -23,7 +24,7 @@ const App = () => {
       <Switch>
         <ProtectedRoute exact path="/profile" component={UserEditProfileContainer} />
         <ProtectedRoute path="/artists/:id" component={UserProfileContainer} />
-        <ProtectedRoute path="/album/:id" component={UserProfileContainer} />
+        <ProtectedRoute path="/albums/:id" component={AlbumDetailsContainer} />
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path="/" component={Home} />

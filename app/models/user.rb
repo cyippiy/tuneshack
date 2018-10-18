@@ -46,7 +46,7 @@ class User < ApplicationRecord
   end
 
   def ensure_img
-    self.photo.attach(io: File.open("/Users/cyip/Documents/app academy/coursework/tuneshack/app/assets/images/Blank-person-photo.png"), filename: "Blank-person-photo.png") unless self.photo.attached?
+    self.photo.attach(io: File.open("../assets/images/Blank-person-photo.png"), filename: "Blank-person-photo.png") unless self.photo.attached?
   end
 
 end

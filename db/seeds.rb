@@ -10,6 +10,8 @@ User.destroy_all
 user=User.new(email:"chris", password: "111111", band_name: "kors k",
 description: "i'm kors k")
 user.save
-user.photo.attach(io: File.open("../assets/duetomorrow.jpg"), filename: "duetomorrow.jpg")
-user1=User.create(email:"stef", password: "111111", band_name: "STEF",
-description: "i'm STEF")
+path = File.join(Rails.root, 'app', "assets", "images","duetomorrow.jpg")
+user.photo.attach(io: File.open(path), filename: "duetomorrow.jpg")
+# user1=User.create(email:"stef", password: "111111", band_name: "STEF",
+# description: "i'm STEF")
+#

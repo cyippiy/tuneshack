@@ -47,7 +47,8 @@ class User < ApplicationRecord
   end
 
   def ensure_img
-    self.photo.attach(io: File.open("../assets/images/Blank-person-photo.png"), filename: "Blank-person-photo.png") unless self.photo.attached?
+    path = File.join(Rails.root, 'app', "assets", "images","Blank-person-photo.png")
+    self.photo.attach(io: File.open(path), filename: "Blank-person-photo.png") unless self.photo.attached?
   end
 
 end

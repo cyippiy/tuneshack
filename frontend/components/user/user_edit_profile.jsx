@@ -50,7 +50,10 @@ class UserEditProfile extends React.Component{
           )
         })
       )
-
+    }
+    let photo = <img />;
+    if (this.props.currentUser.photoUrl){
+      photo = <img className="profile" src={this.props.currentUser.photoUrl} />
     }
 
     return (
@@ -60,6 +63,7 @@ class UserEditProfile extends React.Component{
         <section className="user-profile-body">
           <section className="user-profile-info">
             <h3>EDIT PROFILE</h3>
+            {photo}
             <form id="profile-form" onSubmit={this.handleSubmit}>
               <label>Email:</label>
               <input type="text"

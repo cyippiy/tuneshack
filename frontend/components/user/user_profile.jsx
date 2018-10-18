@@ -48,12 +48,12 @@ class UserProfile extends React.Component{
     )}
 
     let artist,description,email = ' ';
-    console.log(this.props.user);
-    console.log(this.props.id);
+    // console.log(this.props.user);
+    // console.log(this.props.id);
     if (this.props.user.band_name){
       artist = this.props.user.band_name;
     }
-    console.log(this.props.user.band_name);
+    // console.log(this.props.user.band_name);
     if (this.props.user.description){
       description = this.props.user.description;
     }
@@ -61,7 +61,7 @@ class UserProfile extends React.Component{
       email = this.props.user.email;
     }
     let photo = <img />
-    console.log(this.props.user.photoUrl);
+    // console.log(this.props.user.photoUrl);
     if (this.props.user.photoUrl){
       photo = <img className="profile" src={this.props.user.photoUrl} />
     }

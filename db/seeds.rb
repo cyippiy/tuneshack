@@ -48,6 +48,16 @@ path = File.join(Rails.root, 'app', "assets", "images","soulmusic.jpg")
 user5.photo.attach(io: File.open(path), filename: "soulmusic.jpg")
 user5.save
 
+album=Album.new(artist_id: 1, title: "bemani music",description: "bemani music!");
+album.save
+
+
 song = Song.new(album_id: 1, title: "Yamabiko", track_number: 1)
 path=File.join(Rails.root, 'app', "assets", "songs","yamabiko.mp3")
 song.track.attach(io: File.open(path), filename: "yamabiko.mp3")
+song.save
+
+song1 = Song.new(album_id: 1, title: "Yamabiko", track_number: 1)
+path=File.join(Rails.root, 'app', "assets", "songs","back spin sweeper.mp3")
+song1.track.attach(io: File.open(path), filename: "back spin sweeper.mp3")
+song1.save

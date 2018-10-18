@@ -3,7 +3,6 @@ class Api::AlbumsController < ApplicationController
     @album = Album.new(album_params)
 
     if @album.save
-      login(@album)
       render "api/albums/show"
     else
       render json: @album.errors.full_messages, status:422

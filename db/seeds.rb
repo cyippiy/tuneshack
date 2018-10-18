@@ -42,3 +42,7 @@ description: "my beats are sick")
 path = File.join(Rails.root, 'app', "assets", "images","soulmusic.jpg")
 user5.photo.attach(io: File.open(path), filename: "soulmusic.jpg")
 user5.save
+
+song = Song.new(album_id: 1, title: "Yamabiko", track_number: 1)
+path=File.join(Rails.root, 'app', "assets", "songs","yamabiko.mp3")
+song.track.attach(io: File.open(path), filename: "yamabiko.mp3")

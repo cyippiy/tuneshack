@@ -7,7 +7,10 @@ Rails.application.routes.draw do
       resources :albums, only: [:index, :create]
     end
     resource :session, only: [:create, :destroy]
-    resources :albums, only: [:index,:show, :update, :destroy]
+    resources :albums, only: [:index,:show, :update, :destroy] do
+      resources :songs, only: [:index, :show ,:create]
+    end
+    resources :songs, only: [:index,:show,:update]
   end
 
   root "static_pages#root"

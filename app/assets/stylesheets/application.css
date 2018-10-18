@@ -415,3 +415,8 @@ h1{
 .album-index-body{
   margin-top: 75px;
 }
+
+img{
+  max-height: 100px;
+  max-width: 100px;
+}

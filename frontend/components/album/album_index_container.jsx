@@ -12,7 +12,7 @@ const mapStateToProps = (state,ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return ({
-    fetchAlbums: albums => dispatch(fetchAlbum(albums)),
+    fetchAlbums: albums => dispatch(fetchAlbums(albums)),
   })
 }
 export default connect(mapStateToProps,mapDispatchToProps)(AlbumsIndex)

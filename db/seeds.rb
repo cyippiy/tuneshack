@@ -77,7 +77,7 @@ path=File.join(Rails.root, 'app', "assets", "songs","luv sik.mp3")
 song2.track.attach(io: File.open(path), filename: "luv sik.mp3")
 song2.save
 
-song3 = Song.new(album_id: 2, title: "winter lane", track_number: 1)
+song3 = Song.new(album_id: 3, title: "winter lane", track_number: 1)
 path=File.join(Rails.root, 'app', "assets", "songs","winter lane.mp3")
 song3.track.attach(io: File.open(path), filename: "winter lane.mp3")
 song3.save

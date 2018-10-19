@@ -27,6 +27,7 @@ class AlbumIndex extends React.Component{
               </Link>
               <p>Title: {album.title}</p>
               <p>Description: {album.description}</p>
+              <br />
             </section>
           )
         })
@@ -36,7 +37,7 @@ class AlbumIndex extends React.Component{
     return(
       <section className="album-index">
         <AuthNavBarContainer />
-        <section className="album-index-body">
+        <section className="auth-body">
           {display}
         </section>
       </section>

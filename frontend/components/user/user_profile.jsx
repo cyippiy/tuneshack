@@ -40,7 +40,7 @@ class UserProfile extends React.Component{
       display = (
         arr.map(album => {
           return(
-            <section key={album.id}>
+            <section className="album-render" key={album.id}>
               <Link to={`/albums/${album.id}`} className="img">
                 <img src={album.photoUrl} />
               </Link>
@@ -75,7 +75,7 @@ class UserProfile extends React.Component{
 
       <section className="user-profile">
         <AuthNavBarContainer />
-        <section className="user-profile-body">
+        <section className="auth-body">
           <section className="user-profile-info">
             <h3>PROFILE</h3>
             {photo}

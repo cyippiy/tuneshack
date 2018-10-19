@@ -63,7 +63,7 @@ class UserEditProfile extends React.Component{
 
       <section className="user-profile">
         <AuthNavBarContainer />
-        <section className="user-profile-body">
+        <section className="auth-body">
           <section className="user-profile-info">
             <h3>EDIT PROFILE</h3>
             {photo}

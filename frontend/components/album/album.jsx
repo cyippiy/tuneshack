@@ -39,7 +39,7 @@ class AlbumDetails extends React.Component{
       display = (
         arr.map(song => {
           return(
-            <section key={song.id}>
+            <section className="track-render" key={song.id}>
               <h3>Title: {song.title}</h3>
               <h3>Track Number: {song.track_number}</h3>
                 <ReactAudioPlayer
@@ -60,12 +60,16 @@ class AlbumDetails extends React.Component{
     return(
       <section className="album-details">
         <AuthNavBarContainer />
-        <section className="song-details">
-          <ul>
-            <li>{photo}</li>
-            <li>Title: {this.props.album.title}</li>
-            <li>Description: {this.props.album.description}</li>
-            <li>{display}</li>
+        <section className="auth-body">
+          <ul className="album-props">
+            <div className="album-text">
+              <li>{photo}</li>
+              <li>Title: {this.props.album.title}</li>
+              <li>Description: {this.props.album.description}</li>
+            </div>
+            <div className="album-tracks">
+              <li>{display}</li>
+            </div>
           </ul>
         </section>
       </section>

@@ -48,6 +48,12 @@ path = File.join(Rails.root, 'app', "assets", "images","soulmusic.jpg")
 user5.photo.attach(io: File.open(path), filename: "soulmusic.jpg")
 user5.save
 
+user5=User.new(email:"lkp@soullll.com", password: "111111", band_name: "LINK IN PARK",
+description: "EMO SONGS")
+path = File.join(Rails.root, 'app', "assets", "images","city background.jpg")
+user5.photo.attach(io: File.open(path), filename: "city background.jpg")
+user5.save
+
 album=Album.new(artist_id: 1, title: "bemani music",description: "bemani music!");
 path = File.join(Rails.root, 'app', "assets", "images","blankalbum.jpg")
 album.photo.attach(io: File.open(path), filename: "blankalbum.jpg")
@@ -60,6 +66,26 @@ album3=Album.new(artist_id: 2, title: "Sick beats 2",description: "another song"
 path = File.join(Rails.root, 'app', "assets", "images","blankalbum.jpg")
 album3.photo.attach(io: File.open(path), filename: "blankalbum.jpg")
 album3.save
+
+album4=Album.new(artist_id: 3, title: "MARS BRUNO",description: "some top notch songs");
+path = File.join(Rails.root, 'app', "assets", "images","brunomars.png")
+album4.photo.attach(io: File.open(path), filename: "brunomars.png")
+album4.save
+
+album5=Album.new(artist_id: 4, title: "beyond the moon",description: "space looks nice");
+path = File.join(Rails.root, 'app', "assets", "images","elevven.png")
+album5.photo.attach(io: File.open(path), filename: "elevven.png")
+album5.save
+
+album6=Album.new(artist_id: 6, title: "Park of Lincoln greatest hits",description: "some top notch songs");
+path = File.join(Rails.root, 'app', "assets", "images","city background.jpg")
+album6.photo.attach(io: File.open(path), filename: "city background.jpg")
+album6.save
+
+album7=Album.new(artist_id: 5, title: "Deep stuff",description: "deeep vibes");
+path = File.join(Rails.root, 'app', "assets", "images","soulmusic.jpg")
+album7.photo.attach(io: File.open(path), filename: "soulmusic.jpg")
+album7.save
 
 
 song = Song.new(album_id: 1, title: "Yamabiko", track_number: 1)
@@ -81,3 +107,38 @@ song3 = Song.new(album_id: 3, title: "winter lane", track_number: 1)
 path=File.join(Rails.root, 'app', "assets", "songs","winter lane.mp3")
 song3.track.attach(io: File.open(path), filename: "winter lane.mp3")
 song3.save
+
+song4 = Song.new(album_id: 4, title: "fin ES", track_number: 1)
+path=File.join(Rails.root, 'app', "assets", "songs","finesse.mp3")
+song4.track.attach(io: File.open(path), filename: "finesse.mp3")
+song4.save
+
+song4 = Song.new(album_id: 4, title: "uptown funkkkky", track_number: 1)
+path=File.join(Rails.root, 'app', "assets", "songs","uptown funk.mp3")
+song4.track.attach(io: File.open(path), filename: "uptown funk.mp3")
+song4.save
+
+song5 = Song.new(album_id: 5, title: "beyond the moon", track_number: 1)
+path=File.join(Rails.root, 'app', "assets", "songs","beyond the moon.mp3")
+song5.track.attach(io: File.open(path), filename: "beyond the moon.mp3")
+song5.save
+
+song6 = Song.new(album_id: 6, title: "enth E Nd", track_number: 1)
+path=File.join(Rails.root, 'app', "assets", "songs","enth E Nd.mp3")
+song6.track.attach(io: File.open(path), filename: "enth E Nd.mp3")
+song6.save
+
+song7 = Song.new(album_id: 6, title: "session", track_number: 2)
+path=File.join(Rails.root, 'app', "assets", "songs","session.mp3")
+song7.track.attach(io: File.open(path), filename: "session.mp3")
+song7.save
+
+song8 = Song.new(album_id: 7, title: "Our generation", track_number: 1)
+path=File.join(Rails.root, 'app', "assets", "songs","our generation.mp3")
+song8.track.attach(io: File.open(path), filename: "our generation.mp3")
+song8.save
+
+song9 = Song.new(album_id: 7, title: "No Peace", track_number: 2)
+path=File.join(Rails.root, 'app', "assets", "songs","No Peace.mp3")
+song9.track.attach(io: File.open(path), filename: "No Peace.mp3")
+song9.save

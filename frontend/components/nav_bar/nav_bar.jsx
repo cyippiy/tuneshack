@@ -3,7 +3,9 @@ import { Link, Switch, Route } from 'react-router-dom';
 import { AuthRoute } from '../../util/route_util';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
-import HomeContainer from '../home.jsx'
+import HomeContainer from '../home.jsx';
+import Img from 'react-image';
+
 
 
 class NavBar extends React.Component{

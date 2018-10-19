@@ -21,6 +21,34 @@ class Home extends React.Component{
         <header>
           <NavBarContainer />
         </header>
+        <section className="unauth-container">
+          <section className="splash-boxes">
+            <section className="splash-box-left">
+              <Link className="box-left" to="/albums/2">
+                <div className="caption">
+                  <h1>New Nujabez!</h1>
+                </div>
+              </Link>
+            </section>
+            <section className="splash-box-right">
+              <Link className="box-right1" to="/albums/3">
+                <div className="caption">
+                  <h1>Wave Music with the goods</h1>
+                </div>
+              </Link>
+              <Link className="box-right2" to="/albums/3">
+                <div className="caption">
+                <h1>MARS BRUNO holding it down</h1>
+                </div>
+              </Link>
+              <Link className="box-right3" to="/albums/4">
+                <div className="caption">
+                <h1> Elevven was just featured on ASOT</h1>
+                </div>
+              </Link>
+            </section>
+          </section>
+        </section>
       </div>
     );
   }

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class AuthNavBar extends React.Component{
   constructor(props){
     super(props);
-    this.state = this.props.currentUser;
   }
 
   componentDidMount(){
@@ -13,7 +12,7 @@ class AuthNavBar extends React.Component{
   }
 
   randomDiscover(){
-    return Math.floor(Math.random() * (3-1)) + 1
+    return Math.floor(Math.random() * (3-1)) + 1;
   }
 
 
@@ -27,6 +26,7 @@ class AuthNavBar extends React.Component{
         greeting = this.props.currentUser.email;
       }
     }
+
     return (
       <header className="auth-nav-bar">
         <section className="auth-nav-left">

@@ -31,17 +31,17 @@ class Home extends React.Component{
               </Link>
             </section>
             <section className="splash-box-right">
-              <Link className="box-right1" to="/albums/2">
+              <Link className="box-right1" to="/albums/3">
                 <div className="caption">
                   <h1>Wave Music with the goods</h1>
                 </div>
               </Link>
-              <Link className="box-right2" to="/albums/3">
+              <Link className="box-right2" to="/albums/4">
                 <div className="caption">
                 <h1>MARS BRUNO holding it down</h1>
                 </div>
               </Link>
-              <Link className="box-right3" to="/albums/4">
+              <Link className="box-right3" to="/albums/5">
                 <div className="caption">
                 <h1> Elevven was just featured on ASOT</h1>
                 </div>

@@ -31,7 +31,7 @@ class Home extends React.Component{
               </Link>
             </section>
             <section className="splash-box-right">
-              <Link className="box-right1" to="/albums/3">
+              <Link className="box-right1" to="/albums/2">
                 <div className="caption">
                   <h1>Wave Music with the goods</h1>
                 </div>

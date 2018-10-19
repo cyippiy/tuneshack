@@ -9,7 +9,13 @@ class AuthNavBar extends React.Component{
 
   componentDidMount(){
     this.props.fetchUser(this.props.id);
+    // this.props.fetchAlbums();
   }
+
+  randomDiscover(){
+    return Math.floor(Math.random() * (3-1)) + 1
+  }
+
 
   render(){
     let greeting = " ";
@@ -21,7 +27,6 @@ class AuthNavBar extends React.Component{
         greeting = this.props.currentUser.email;
       }
     }
-
     return (
       <header className="auth-nav-bar">
         <section className="auth-nav-left">
@@ -29,7 +34,7 @@ class AuthNavBar extends React.Component{
             TuneShack
           </Link>
           <ul>
-            <li><Link to="/profile" className="btn">discover</Link></li>
+            <li><Link to={`/albums/${this.randomDiscover()}`} className="btn">discover</Link></li>
             <li><Link to="/albums" className="btn">feed</Link></li>
             <li><form className="search-bar" value="">
               <input type="text" placeholder="search bar"></input>

@@ -1,25 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Live Demo](https://tuneshack.herokuapp.com)
 
-Things you may want to cover:
 
-* Ruby version
+TuneShack is a music application clone that is inspired by BandCamp. It's a way for people to discover and find music. It was built with a Rails/PostgresSQL backend and React.js/Redux on the frontend.
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# tuneshack
+## Features
+  * Secure frontend to backend user authentication using BCrypt.
+  * Users can edit information

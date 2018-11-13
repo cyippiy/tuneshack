@@ -9,6 +9,7 @@ class UserEditProfile extends React.Component{
     super(props);
     this.state = this.props.currentUser;
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleFile = this.handleFile.bind(this);
   }
   componentDidMount(){
     this.props.fetchUser(this.props.id);
@@ -24,7 +25,10 @@ class UserEditProfile extends React.Component{
    handleSubmit(e) {
      e.preventDefault();
      this.props.editUser(this.state);
+     const formData = new FormData();
+    //  formData.append('user[photo')
    }
+
 
   render(){
     let band_name = " ";
@@ -68,6 +72,7 @@ class UserEditProfile extends React.Component{
             <h3>EDIT PROFILE</h3>
             {photo}
             <form id="profile-form" onSubmit={this.handleSubmit}>
+              <input type="file" />
               <label>Email:</label>
               <input type="text"
                 value={this.state.email}

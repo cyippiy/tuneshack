@@ -35,3 +35,11 @@ export const editUser = (user) => {
     data: {user}
   })
 }
+
+export const editUserPhoto = (user) => {
+  return $.ajax({
+    method: "PATCH",
+    url: `api/users/${user.id}`,
+    data: {user}
+  })
+}

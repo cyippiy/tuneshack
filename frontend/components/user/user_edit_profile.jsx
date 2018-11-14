@@ -9,7 +9,8 @@ class UserEditProfile extends React.Component{
     super(props);
     this.state = this.props.currentUser;
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleFile = this.handleFile.bind(this);
+    this.handleFile = this.handleFile.bind(this);
+    this.updateFile = this.updateFile.bind(this);
   }
   componentDidMount(){
     this.props.fetchUser(this.props.id);
@@ -24,11 +25,26 @@ class UserEditProfile extends React.Component{
 
    handleSubmit(e) {
      e.preventDefault();
+     debugger
      this.props.editUser(this.state);
-     const formData = new FormData();
-    //  formData.append('user[photo')
    }
 
+   updateFile(e){
+     this.setState({photo: e.currentTarget.files[0]})
+   }
+
+   handleFile(e) {
+     e.preventDefault();
+     const formData = new FormData();
+     formData.append('user[photo]');
+     $.ajax({
+       method: "PATCH",
+       url: `api/users/${this.props.id}`,
+       data: formData,
+       contentType: false,
+       processData: false
+     });
+   }
 
   render(){
     let band_name = " ";
@@ -72,7 +88,7 @@ class UserEditProfile extends React.Component{
             <h3>EDIT PROFILE</h3>
             {photo}
             <form id="profile-form" onSubmit={this.handleSubmit}>
-              <input type="file" />
+              <input type="file" onChange={this.updateFile} />
               <label>Email:</label>
               <input type="text"
                 value={this.state.email}

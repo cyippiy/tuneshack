@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     # resources :users, only: [:create, :index, :show, :update]
     resources :users, only: [:create, :show, :index, :update] do
+      # post 'upload', on: :collection
       resources :albums, only: [:index, :create]
     end
     resource :session, only: [:create, :destroy]

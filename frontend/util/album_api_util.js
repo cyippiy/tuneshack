@@ -18,3 +18,13 @@ export const fetchAlbum = id => {
     url: `api/albums/${id}`
   })
 }
+
+export const createAlbum = (album,id) => {
+  return $.ajax({
+    method: "POST",
+    url: `api/users/${id}/albums`,
+    data: {album},
+    contentType: false,
+    processData: false
+  })
+}

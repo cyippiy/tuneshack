@@ -108,6 +108,8 @@ class UserEditProfile extends React.Component{
           <section className="user-profile-albums">
             <h3><strong>Albums</strong></h3>
             <br />
+            
+            <br />
             {display}
           </section>
         </section>

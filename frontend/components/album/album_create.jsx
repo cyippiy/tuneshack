@@ -1,7 +1,5 @@
 import React from 'react';
-import AuthNavBarContainer from '../auth_nav_bar/auth_nav_bar_container';
-import values from 'lodash/values';
-import { Link } from 'react-router-dom';
+import merge from "lodash/merge";
 
 class AlbumCreate extends React.Component {
     constructor(props){
@@ -9,8 +7,10 @@ class AlbumCreate extends React.Component {
         this.state = {
             title: "",
             description: "",
-            photo: null
+            artist_id: this.props.user,
         }
+        this.handleFile = this.handleFile.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     update(field) {
@@ -19,10 +19,36 @@ class AlbumCreate extends React.Component {
         });
     }
 
+    handleFile(e){
+        this.setState({photo: e.currentTarget.files[0]})
+    }
+
     handleSubmit(e) {
         e.preventDefault();
+        if (document.getElementById('photo').files.length === 1){
+            this.state.contentType = false,
+            this.state.processData = false
+        }
         const album = merge({}, this.state);
-        this.props.createAlbum(album);
+        console.log(album);
+        this.props.createAlbum(album,this.props.user);
+    }
+
+    render() {
+        return <div id="album-create-container">
+            <div id="album-form">
+              <form onSubmit={this.handleSubmit} className="album-form-box">
+                <label>Title:</label>
+                <input type="text" value={this.state.title} onChange={this.update("title")} className="album-input" id="title" />
+                <label>Description:</label>
+                <input type="text" value={this.state.description} onChange={this.update("description")} className="album-input" id="description" />
+                <label>Photo:</label>
+                <input type="file" onChange={this.handleFile} className="album-input" id="photo" />
+                
+                <button className="album-submit" type="submit" id="btn-submit">Create</button>
+              </form>
+            </div>
+          </div>;
     }
 
 }

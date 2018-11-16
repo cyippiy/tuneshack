@@ -3,6 +3,7 @@ import AuthNavBarContainer from '../auth_nav_bar/auth_nav_bar_container';
 import values from 'lodash/values';
 import {withRouter} from 'react-router';
 import { Link } from 'react-router-dom';
+import AlbumCreate from '../album/album_create_container'
 
 class UserEditProfile extends React.Component{
   constructor(props){
@@ -108,7 +109,7 @@ class UserEditProfile extends React.Component{
           <section className="user-profile-albums">
             <h3><strong>Albums</strong></h3>
             <br />
-            
+              <AlbumCreate />
             <br />
             {display}
           </section>

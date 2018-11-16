@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import AlbumCreate from './album_create'
+import AlbumCreate from './album_create';
 import values from 'lodash/values';
 import { createAlbum } from '../../actions/album_actions';
 

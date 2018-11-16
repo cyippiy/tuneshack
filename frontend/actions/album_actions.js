@@ -31,3 +31,8 @@ export const fetchAlbum = (id) => dispatch => {
   return AlbumAPIUtil.fetchAlbum(id).then(album => dispatch(receiveAlbum(album)),
   err => dispatch(receiveErrors(err.responseJSON)))
 }
+
+export const createAlbum = (album,id) => dispatch => {
+  return AlbumAPIUtil.createAlbum(album,id).then(album => dispatch(receiveAlbum(album)),
+  err => dispatch(receiveErrors(err.responseJSON)))
+}

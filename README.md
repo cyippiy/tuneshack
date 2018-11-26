@@ -14,7 +14,8 @@ TuneShack is a music application clone that is inspired by BandCamp. It's a way 
 ## Technical Implementation
 The music player is one of the many react components that is conditionally rendered based on the front-end routes. The album information is pulled from the state slice and is fed into the music player.
 
-```render(){
+```
+render(){
     if(!this.props.album){
       return null;
     }

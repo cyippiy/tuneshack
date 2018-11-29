@@ -7,12 +7,20 @@ import MusicPlayer from "../music_player/music_player";
 class AlbumEdit extends React.Component {
     constructor(props) {
         super(props);
-        this.state = this.props.album;
+        this.state = {
+            title: "",
+            description: "",
+            // artist: ""
+        }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     componentDidMount() {
         this.props.fetchAlbum(this.props.id);
         this.props.fetchSongsAlbum(this.props.id);
+        if (this.props.album){
+            this.setState({ title: this.props.album.title,
+                            description: this.props.album.description})
+        }
     }
 
     componentDidUpdate(prevProps) {
@@ -84,7 +92,7 @@ class AlbumEdit extends React.Component {
                             <label>Description:</label>
                             <input type="text"
                                 value={this.state.description}
-                                onChange={this.update("title")} />
+                                onChange={this.update("description")} />
                             <input id="btn" type="submit" value="edit information" />
                             </form>
                         </div>

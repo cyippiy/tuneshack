@@ -43,7 +43,7 @@ class Home extends React.Component{
               </Link>
               <Link className="box-right3" to="/albums/5">
                 <div className="caption">
-                <h1> Elevven was just featured on ASOT</h1>
+                <h1>Elevven was just featured on ASOT</h1>
                 </div>
               </Link>
             </section>

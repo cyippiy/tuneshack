@@ -42,8 +42,10 @@ class Home extends React.Component{
                 </div>
               </Link>
               <Link className="box-right3" to="/albums/5">
-                <div className="caption">
-                <h1>Elevven was just featured on ASOT</h1>
+                <div className="overlay">
+                  <div className="caption">
+                  <h1>Elevven was just featured on ASOT</h1>
+                  </div>
                 </div>
               </Link>
             </section>

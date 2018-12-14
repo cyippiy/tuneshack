@@ -449,8 +449,8 @@ h1{
 }
 
 .unauth-container{
-  margin-top: 150px;
-  height:1000px;
+  margin-top: 100px;
+  min-height:700px;
   min-width: 600px;
 }
 
@@ -543,5 +543,22 @@ h1{
   display:flex;
   flex-direction:column;
   margin: 0 auto;
-  align-items: center;;
+  align-items: center;
+}
+
+.footer{
+  display: flex;
+  background: #477987;
+  min-height: 320px;
+}
+
+.splash-icons{
+  display: grid;
+  background: white;
+  min-height: 320px;
+}
+
+.splash-icons > div{
+  display: flex;
+  margin: 0 auto;
 }

@@ -50,6 +50,19 @@ class Home extends React.Component{
               </Link>
             </section>
           </section>
+          <section className="splash-icons">
+            <div className="splash-fans">
+              <h1>Fans</h1>
+            </div>
+            <div className="splash-artists">
+              <h1>Artists</h1>
+            </div>
+            <div className="splash-labels">
+              <h1>Labels</h1>
+            </div>
+          </section>
+          <section className="footer">
+          </section>
         </section>
       </div>
     );

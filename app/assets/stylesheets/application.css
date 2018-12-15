@@ -553,12 +553,19 @@ h1{
 }
 
 .splash-icons{
-  display: grid;
+  display: flex;
+  /* grid-template-columns: 33% 33% 33%; */
   background: white;
   min-height: 320px;
+  justify-content: space-around;
 }
 
-.splash-icons > div{
-  display: flex;
-  margin: 0 auto;
+.splash-fans{
+  background: grey;
+}
+.splash-artists{
+  background: green;
+}
+.splash-labels{
+  background: blue;
 }

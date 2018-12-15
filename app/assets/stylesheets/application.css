@@ -569,3 +569,7 @@ h1{
 .splash-labels{
   background: blue;
 }
+
+.splash-icons h1{
+  margin: 20px;
+}

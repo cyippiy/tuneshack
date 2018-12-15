@@ -53,8 +53,7 @@ class Home extends React.Component{
             <div className="splash-fans">
               <h1>Fans</h1>
               <img src="https://bandcamp.com/img/homepage_2015/signups-fans-icon@3x.png" />
-              <h1>
-                Get instant streaming of your purchases, follow your
+              <h1>Get instant streaming of your purchases, follow your
                 favorite artists, keep a wishlist, showcase your collection,
                 and explore the music of like-minded fans.
               </h1>
@@ -62,8 +61,7 @@ class Home extends React.Component{
             <div className="splash-artists">
               <h1>Artists</h1>
             <img src="https://bandcamp.com/img/homepage_2015/signups-artists-icon@3x.png" />
-              <h1>
-                Sell directly to your fans with total control over your
+              <h1>Sell directly to your fans with total control over your
                 music and pricing. Easy access to your customers’ data,
                 real-time stats, music chart reporting, and more.
               </h1>
@@ -71,8 +69,7 @@ class Home extends React.Component{
             <div className="splash-labels">
               <h1>Labels</h1>
             <img src="https://bandcamp.com/img/homepage_2015/signups-labels-icon@3x.png" />
-              <h1>
-                Unified accounting and stats across all your artists, a
+              <h1>Unified accounting and stats across all your artists, a
                 single fulfillment interface for all your merch, direct
                 payments on a per release basis, and a whole lot more.
               </h1>

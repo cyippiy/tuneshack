@@ -557,7 +557,7 @@ h1{
   /* grid-template-columns: 33% 33% 33%; */
   background: white;
   min-height: 320px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .splash-fans{

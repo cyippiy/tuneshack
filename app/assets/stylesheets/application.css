@@ -520,12 +520,11 @@ header{
   opacity: 0.9;
 }
 
-.box-right3:hover > .overlay {
+/* .box-right3:hover > .overlay {
     height: 100%;
     background-color:#000;
     opacity:0.5;
-    /* border-radius:30px; */
-}
+} */
 
 .album-props{
   display: flex;

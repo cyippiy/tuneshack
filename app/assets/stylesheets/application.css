@@ -236,7 +236,7 @@ header{
   text-decoration: underline;
 }
 
-h1{
+.splash-boxes h1{
   margin-top: 150px;
   text-align: center;
 }
@@ -546,30 +546,78 @@ h1{
   align-items: center;
 }
 
-.footer{
-  display: flex;
-  background: #477987;
-  min-height: 320px;
-}
-
 .splash-icons{
   display: flex;
   /* grid-template-columns: 33% 33% 33%; */
   background: white;
+  min-height: 120px;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.splash-fans{
+  /* background: grey; */
+  color: #477987;
+}
+.splash-fans p{
+  /* background: grey; */
+  color: #000
+}
+.splash-artists{
+  /* background: green; */
+    color: #477987
+}
+.splash-artists p{
+  /* background: green; */
+    color: #000;
+}
+.splash-labels{
+  /* background: blue; */
+    color: #477987
+}
+.splash-labels p{
+  /* background: blue; */
+    color: #000;
+}
+
+.splash-icons p{
+  margin: 30px;
+  text-align: center;
+}
+
+.splash-icons h1{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.learn-button{
+  display: flex;
+}
+
+.learn-more {
+  padding: 10px 80px;
+  /* text-align: center; */
+  border: 1px solid black;
+  margin: 0 auto;
+  border-radius: 5px;
+  cursor: not-allowed;
+}
+
+
+.footer{
+  display: flex;
+  background: #477987;
   min-height: 320px;
   justify-content: space-between;
 }
 
-.splash-fans{
-  background: grey;
-}
-.splash-artists{
-  background: green;
-}
-.splash-labels{
-  background: blue;
+.foot-col{
+  display: flex;
+  flex-direction: column; 
+  margin-top: 30px;
 }
 
-.splash-icons h1{
-  margin: 20px;
+.fake{
+  cursor: not-allowed;
 }

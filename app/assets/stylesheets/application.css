@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
  body{
@@ -609,15 +610,26 @@ header{
   display: flex;
   background: #477987;
   min-height: 320px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .foot-col{
   display: flex;
   flex-direction: column; 
   margin-top: 30px;
+  color: white;
+}
+
+.foot-col a{
+  color: white;
+  text-decoration: none;
+  padding: 5px;
 }
 
 .fake{
   cursor: not-allowed;
+}
+
+.contact-links{
+  margin-top: 10px;
 }

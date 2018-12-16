@@ -161,6 +161,7 @@ header{
   display:inline-block;
   align-content: flex-end;
   color: grey;
+  cursor: not-allowed;
   /* text-align: center; */
 }
 
@@ -506,25 +507,32 @@ header{
   height: 33%;
   background:no-repeat center/100% url("https://i.ytimg.com/vi/XsKL_OqroAw/maxresdefault.jpg");
   opacity: 0.9;
-
+  z-index: 1;
 }
 
 .box-right2{
   height: 33%;
   background:no-repeat center/100% url("http://www.brunomars.com//sites/g/files/g2000006216/f/201611/BrunoMars_Site_NewSite_Assets_FBOG.jpg");
   opacity: 0.9;
+  z-index: 1;
 }
 .box-right3{
   height: 33%;
   background:no-repeat top/100% url("https://pbs.twimg.com/media/DoROjrRWkAEF_zG.jpg");
   opacity: 0.9;
+  z-index: 1;
 }
 
-/* .box-right3:hover > .overlay {
-    height: 100%;
+.box-right3:hover {
     background-color:#000;
-    opacity:0.5;
-} */
+    opacity:1;
+}
+
+.caption h1{
+  text-shadow: #000;
+  color: white;
+  z-index: 2;
+}
 
 .album-props{
   display: flex;

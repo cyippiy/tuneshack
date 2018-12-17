@@ -5,10 +5,10 @@ const footer_auth = () => {
     return (
     <section className="footer-auth">
         <section className="footer-left">
-            <h3>TuneShack</h3>
+            <h2>TuneShack</h2>
         </section>
         <section className="footer-right">
-            <h3>Chris Yip</h3>
+            <h2>Made by: Chris Yip</h2>
             <a href="https://www.linkedin.com/in/cyip87/">LinkedIn</a>
             <a href="https://github.com/cyippiy">GitHub</a>
         </section>

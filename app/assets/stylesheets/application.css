@@ -181,6 +181,7 @@ header{
 .login-form-container{
   display: flex;
   margin-top: 150px;
+  margin-bottom: 100px;
   /* background-color: green; */
 }
 
@@ -616,7 +617,7 @@ header{
 .footer{
   display: flex;
   background: #477987;
-  min-height: 320px;
+  min-height: 250px;
   justify-content: space-around;
 }
 
@@ -639,4 +640,34 @@ header{
 
 .contact-links{
   margin-top: 10px;
+}
+
+.footer-auth{
+  display: flex;
+  justify-content: space-between;
+  background: #848484;
+  color: white;
+  margin-top: 50px;
+}
+
+.footer-auth a{
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.footer-left h2{
+  margin-left: 10px;
+}
+
+.footer-right{
+  display: flex;
+}
+
+.footer-right h2{
+  margin-right: 10px;
+}
+
+.footer-right a{
+  margin-right: 10px;
 }

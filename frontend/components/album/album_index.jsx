@@ -2,6 +2,7 @@ import React from 'react';
 import AuthNavBarContainer from '../auth_nav_bar/auth_nav_bar_container';
 import values from 'lodash/values';
 import { Link } from 'react-router-dom';
+import Footer_auth from '../footer_bar/footer_auth';
 
 class AlbumIndex extends React.Component{
   componentDidMount(){
@@ -40,6 +41,7 @@ class AlbumIndex extends React.Component{
         <section className="auth-body">
           {display}
         </section>
+        <Footer_auth />
       </section>
     )
   }

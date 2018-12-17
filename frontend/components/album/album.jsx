@@ -3,7 +3,7 @@ import AuthNavBarContainer from '../auth_nav_bar/auth_nav_bar_container';
 import values from 'lodash/values';
 import ReactAudioPlayer from 'react-audio-player';
 import MusicPlayer from '../music_player/music_player'
-
+import Footer_auth from '../footer_bar/footer_auth'
 
 class AlbumDetails extends React.Component{
   constructor(props){
@@ -72,6 +72,7 @@ class AlbumDetails extends React.Component{
             </div>
           </ul>
         </section>
+        <Footer_auth />
       </section>
   )}
 }

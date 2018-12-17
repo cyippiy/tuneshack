@@ -3,6 +3,8 @@ import AuthNavBarContainer from '../auth_nav_bar/auth_nav_bar_container';
 import values from 'lodash/values';
 import {withRouter} from 'react-router';
 import { Link } from 'react-router-dom';
+import Footer_auth from "../footer_bar/footer_auth";
+
 
 class UserEditProfile extends React.Component{
   constructor(props){
@@ -90,6 +92,7 @@ class UserEditProfile extends React.Component{
             {display}
           </section>
         </section>
+        <Footer_auth />
       </section>
     );
     }

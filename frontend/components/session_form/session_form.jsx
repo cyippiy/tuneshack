@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 import merge from 'lodash/merge';
 import NavBarContainer from '../nav_bar/nav_bar_container';
+import Footer_unauth from "../footer_bar/footer_unauth";
 
 class SessionForm extends React.Component {
 
@@ -60,6 +61,7 @@ class SessionForm extends React.Component {
     }
 
     return(
+      <div>
 
       <div className="login-form-container">
         <header>
@@ -97,6 +99,10 @@ class SessionForm extends React.Component {
                 {demo}
             </div>
         </form>
+      </div>
+        <footer className="footer_unauth_login">
+          <Footer_unauth />
+        </footer>
       </div>
     );
   }

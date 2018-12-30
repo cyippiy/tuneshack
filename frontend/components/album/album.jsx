@@ -10,23 +10,29 @@ class AlbumDetails extends React.Component{
     super(props);
     this.state = {
       title: "",
+      artist: "",
       description: ""
     }
   }
   componentDidMount(){
     this.props.fetchAlbum(this.props.id);
     this.props.fetchSongsAlbum(this.props.id);
+    // this.props.fetchUser(this.props.artist);
   }
 
   componentDidUpdate(prevProps) {
   if (prevProps.match.params.id !== this.props.match.params.id) {
     this.props.fetchAlbum(this.props.match.params.id);
     this.props.fetchSongsAlbum(this.props.id);
+    // this.props.fetchUser(this.props.artist)
     }
   }
 
   render(){
     if(!this.props.album){
+      return null;
+    }
+    else if (!this.props.artist){
       return null;
     }
 
@@ -36,20 +42,17 @@ class AlbumDetails extends React.Component{
       return null;
     }
     else{
-      display = (
-        arr.map(song => {
-          return(
-            <section className="track-render" key={song.id}>
-              <h3>Title: {song.title}</h3>
-              <h3>Track Number: {song.track_number}</h3>
-                <ReactAudioPlayer
-                  src={song.songUrl}
-                  controls
-                />
-            </section>
-          )
-        })
-    )}
+          // this.setState({band_name: this.props.user.band_name, email: this.props.user.email,
+      // this.setState({ title: this.props.album.title})
+        // this.artist: this.props.album.artist_id, description: this.props.album.description })
+          display = arr.map(song => {
+            return <section className="track-render" key={song.id}>
+                <h3>Title: {song.title}</h3>
+                <h3>Track Number: {song.track_number}</h3>
+                <ReactAudioPlayer src={song.songUrl} controls />
+              </section>;
+          });
+        }
     let photo = <img />
     // console.log(this.props.user.photoUrl);
     if (this.props.album.photoUrl){
@@ -65,6 +68,7 @@ class AlbumDetails extends React.Component{
             <div className="album-text">
               <li>{photo}</li>
               <li>Title: {this.props.album.title}</li>
+              <li>Aritst: {this.props.album.artist_id}</li>
               <li>Description: {this.props.album.description}</li>
             </div>
             <div className="album-tracks">

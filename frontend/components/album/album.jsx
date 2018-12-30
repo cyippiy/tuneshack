@@ -17,22 +17,23 @@ class AlbumDetails extends React.Component{
   componentDidMount(){
     this.props.fetchAlbum(this.props.id);
     this.props.fetchSongsAlbum(this.props.id);
-    // this.props.fetchUser(this.props.artist);
+    if (this.props.albums){
+      this.props.fetchUser(this.props.album.artist_id);
+    }
   }
 
   componentDidUpdate(prevProps) {
-  if (prevProps.match.params.id !== this.props.match.params.id) {
-    this.props.fetchAlbum(this.props.match.params.id);
-    this.props.fetchSongsAlbum(this.props.id);
-    // this.props.fetchUser(this.props.artist)
+    if (prevProps.match.params.id !== this.props.match.params.id) {
+      this.props.fetchAlbum(this.props.match.params.id);
+      this.props.fetchSongsAlbum(this.props.id);
+      if (this.props.albums){
+        this.props.fetchUser(this.props.album.artist_id);
+      }
     }
   }
 
   render(){
     if(!this.props.album){
-      return null;
-    }
-    else if (!this.props.artist){
       return null;
     }
 
@@ -42,9 +43,6 @@ class AlbumDetails extends React.Component{
       return null;
     }
     else{
-          // this.setState({band_name: this.props.user.band_name, email: this.props.user.email,
-      // this.setState({ title: this.props.album.title})
-        // this.artist: this.props.album.artist_id, description: this.props.album.description })
           display = arr.map(song => {
             return <section className="track-render" key={song.id}>
                 <h3>Title: {song.title}</h3>

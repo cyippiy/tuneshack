@@ -1,17 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import AlbumDetails from './album'
+import AlbumDetails from './album';
 import values from 'lodash/values';
 import { fetchAlbum } from '../../actions/album_actions';
 import { fetchUser } from '../../actions/session_actions';
 import { fetchSongsAlbum } from '../../actions/song_actions';
 
 const mapStateToProps = (state,ownProps) => {
-  return ({
+  return { 
     album: state.entities.albums[ownProps.match.params.id],
-    id: ownProps.match.params.id,
+    id: ownProps.match.params.id, 
     songs: state.entities.songs.songs,
-  })
+    artist: state.entities.users}
 }
 
 const mapDispatchToProps = dispatch => {

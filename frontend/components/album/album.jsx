@@ -2,8 +2,9 @@ import React from 'react';
 import AuthNavBarContainer from '../auth_nav_bar/auth_nav_bar_container';
 import values from 'lodash/values';
 import ReactAudioPlayer from 'react-audio-player';
-import MusicPlayer from '../music_player/music_player'
-import Footer_auth from '../footer_bar/footer_auth'
+import MusicPlayer from '../music_player/music_player';
+import Footer_auth from '../footer_bar/footer_auth';
+import Artist from '../artist/artist_container';
 
 class AlbumDetails extends React.Component{
   constructor(props){
@@ -66,7 +67,7 @@ class AlbumDetails extends React.Component{
             <div className="album-text">
               <li>{photo}</li>
               <li>Title: {this.props.album.title}</li>
-              <li>Aritst: {this.props.album.artist_id}</li>
+              <li>Aritst: <Artist id={this.props.album.artist_id}/></li>
               <li>Description: {this.props.album.description}</li>
             </div>
             <div className="album-tracks">

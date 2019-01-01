@@ -11,7 +11,8 @@ const mapStateToProps = (state,ownProps) => {
     album: state.entities.albums[ownProps.match.params.id],
     id: ownProps.match.params.id, 
     songs: state.entities.songs.songs,
-    artist: state.entities.users}
+    artist: state.entities.users
+  }
 }
 
 const mapDispatchToProps = dispatch => {

@@ -67,12 +67,12 @@ path = File.join(Rails.root, 'app', "assets", "images","blankalbum.jpg")
 album3.photo.attach(io: File.open(path), filename: "blankalbum.jpg")
 album3.save
 
-album4=Album.new(artist_id: 3, title: "MARS BRUNO",description: "some top notch songs");
+album4=Album.new(artist_id: 4, title: "MARS BRUNO",description: "some top notch songs");
 path = File.join(Rails.root, 'app', "assets", "images","brunomars.png")
 album4.photo.attach(io: File.open(path), filename: "brunomars.png")
 album4.save
 
-album5=Album.new(artist_id: 4, title: "beyond the moon",description: "space looks nice");
+album5=Album.new(artist_id: 5, title: "beyond the moon",description: "space looks nice");
 path = File.join(Rails.root, 'app', "assets", "images","elevven.png")
 album5.photo.attach(io: File.open(path), filename: "elevven.png")
 album5.save

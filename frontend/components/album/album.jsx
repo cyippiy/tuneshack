@@ -46,9 +46,9 @@ class AlbumDetails extends React.Component{
     else{
           display = arr.map(song => {
             return <section className="track-render" key={song.id}>
+                <ReactAudioPlayer src={song.songUrl} controls />
                 <h3>Title: {song.title}</h3>
                 <h3>Track Number: {song.track_number}</h3>
-                <ReactAudioPlayer src={song.songUrl} controls />
               </section>;
           });
         }

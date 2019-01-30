@@ -414,8 +414,8 @@ header{
 }
 
 .profile {
-  max-height: 100px;
-  max-width: 100px;
+  max-height: 350px;
+  max-width: 350px;
 }
 
 .song-details{
@@ -671,3 +671,6 @@ header{
 .footer-right a{
   margin-right: 10px;
 }
+
+/* album styliing */
+

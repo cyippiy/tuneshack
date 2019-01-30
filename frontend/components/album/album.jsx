@@ -47,8 +47,8 @@ class AlbumDetails extends React.Component{
           display = arr.map(song => {
             return <section className="track-render" key={song.id}>
                 <ReactAudioPlayer src={song.songUrl} controls />
-                <h3>Title: {song.title}</h3>
-                <h3>Track Number: {song.track_number}</h3>
+                <li>{song.track_number}. {song.title}</li>
+                {/* <h3>Track Number: {song.track_number}</h3> */}
               </section>;
           });
         }
@@ -66,17 +66,20 @@ class AlbumDetails extends React.Component{
           <ul className="album-props">
             <div className="album-text">
               <li>Title: {this.props.album.title}</li>
-              <li>Aritst: <Artist id={this.props.album.artist_id}/></li>
-              <li>Description: {this.props.album.description}</li>
+              <li>By: <Artist id={this.props.album.artist_id}/></li>
             </div>
             <div className="album-tracks">
               <li>{display}</li>
             </div>
-          </ul>
-          <ul className="album-props">
             <div className="album-text">
-              <li>{photo}</li>
+              <br></br>
+              <li>Description: {this.props.album.description}</li>
             </div>
+          </ul>
+          <ul className="album-props-2">
+           
+              <li>{photo}</li>
+
           </ul>
         </section>
         <Footer_auth />

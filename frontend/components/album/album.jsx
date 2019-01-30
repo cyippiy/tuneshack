@@ -65,13 +65,17 @@ class AlbumDetails extends React.Component{
         <section className="auth-body">
           <ul className="album-props">
             <div className="album-text">
-              <li>{photo}</li>
               <li>Title: {this.props.album.title}</li>
               <li>Aritst: <Artist id={this.props.album.artist_id}/></li>
               <li>Description: {this.props.album.description}</li>
             </div>
             <div className="album-tracks">
               <li>{display}</li>
+            </div>
+          </ul>
+          <ul className="album-props">
+            <div className="album-text">
+              <li>{photo}</li>
             </div>
           </ul>
         </section>

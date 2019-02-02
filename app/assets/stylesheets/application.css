@@ -17,6 +17,7 @@
 
  html{
    height: 100%;
+   position: relative;
  }
 
  body{
@@ -25,6 +26,7 @@
      height: 100%;
      margin: 0;
      padding: 0;
+     position: relative;
      /* z-index: 1; */
  }
 
@@ -435,6 +437,7 @@ header{
 
 .auth-body{
   margin-top: 75px;
+  margin-bott
   display: flex;
   justify-content: space-around;
 }
@@ -648,17 +651,6 @@ header{
   margin-top: 10px;
 }
 
-.footer-auth{
-  /* position: absolute; */
-  display: flex;
-  justify-content: space-between;
-  background: #848484;
-  color: white;
-  margin-top: 50px;
-  min-height: 100%;
-  bottom: 0;
-}
-
 .footer-auth a{
   color: white;
   cursor: pointer;
@@ -685,4 +677,15 @@ header{
 .album-details{
   min-height: 100%;
   position: relative;
+}
+
+.footer-auth{
+  /* position: absolute; */
+  display: flex;
+  justify-content: space-between;
+  background: #848484;
+  color: white;
+  margin-top: 50px;
+  min-height: 100%;
+  bottom: 0;
 }

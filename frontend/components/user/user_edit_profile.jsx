@@ -66,6 +66,11 @@ class UserEditProfile extends React.Component{
       <section className="user-profile">
         <AuthNavBarContainer />
         <section className="auth-body">
+          <section className="user-profile-albums">
+            <h3><strong>Albums</strong></h3>
+            <br />
+            {display}
+          </section>
           <section className="user-profile-info">
             <h3>EDIT PROFILE</h3>
             {photo}
@@ -86,11 +91,7 @@ class UserEditProfile extends React.Component{
               <input id="btn" type="submit" value="edit information" />
             </form>
           </section>
-          <section className="user-profile-albums">
-            <h3><strong>Albums</strong></h3>
-            <br />
-            {display}
-          </section>
+        
         </section>
         <Footer_auth />
       </section>

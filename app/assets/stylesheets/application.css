@@ -437,7 +437,7 @@ header{
 
 .auth-body{
   margin-top: 75px;
-  margin-bott
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-around;
 }

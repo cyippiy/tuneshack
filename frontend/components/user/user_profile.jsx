@@ -77,17 +77,17 @@ class UserProfile extends React.Component{
       <section className="user-profile">
         <AuthNavBarContainer />
         <section className="auth-body">
+          <section className="user-profile-albums">
+            <h3><strong>Albums</strong></h3>
+            {display}
+          </section>
+          <br />
           <section className="user-profile-info">
             <h3>PROFILE</h3>
             {photo}
             <h3>Email: {email}</h3>
             <h3>Name/Artist Name: {artist}</h3>
             <h3>Description: {description}</h3>
-          </section>
-          <br />
-          <section className="user-profile-albums">
-            <h3><strong>Albums</strong></h3>
-            {display}
           </section>
         </section>
         <Footer_auth />

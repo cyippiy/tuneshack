@@ -557,6 +557,16 @@ header{
   align-items: center;
 }
 
+.album-props-2{
+  display:flex;
+  flex-direction: column;
+}
+
+.album-props-2 img{
+  max-height: 350px;
+  max-width: 350px;
+}
+
 .album-text{
   margin: 0 auto;
   align-items: center;
@@ -683,15 +693,16 @@ header{
 .album-details{
   min-height: 100%;
   position: relative;
+  height: 100%;
 }
 
 .footer-auth{
-  /* position: absolute; */
   display: flex;
   justify-content: space-between;
   background: #848484;
   color: white;
   margin-top: 50px;
   min-height: 100%;
+  /* position: absolute; */
   bottom: 0;
 }

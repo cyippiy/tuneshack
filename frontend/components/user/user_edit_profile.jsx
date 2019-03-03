@@ -75,11 +75,11 @@ class UserEditProfile extends React.Component{
             <h3>EDIT PROFILE</h3>
             {photo}
             <form id="profile-form" onSubmit={this.handleSubmit}>
-              <label>Email:</label>
+              <label>Email</label>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update("email")} />
-              <label>Name/Artist Name:</label>
+              <label>Name/Artist Name</label>
               <input type="text"
                 value={band_name}
                 onChange={this.update("band_name")} />

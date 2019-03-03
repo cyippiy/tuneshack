@@ -46,8 +46,8 @@ class AlbumDetails extends React.Component{
     else{
           display = arr.map(song => {
             return <section className="track-render" key={song.id}>
-                <ReactAudioPlayer src={song.songUrl} controls />
                 <li>{song.track_number}. {song.title}</li>
+                <ReactAudioPlayer src={song.songUrl} controls />
                 {/* <h3>Track Number: {song.track_number}</h3> */}
               </section>;
           });
@@ -64,22 +64,18 @@ class AlbumDetails extends React.Component{
         <AuthNavBarContainer />
         <section className="auth-body">
           <ul className="album-props">
-            <div className="album-text">
-              <li>Title: {this.props.album.title}</li>
-              <li>By: <Artist id={this.props.album.artist_id}/></li>
-            </div>
             <div className="album-tracks">
               <li>{display}</li>
             </div>
+          </ul>
+          <ul className="album-props-2">
+            {photo}
             <div className="album-text">
+              <li>Title: {this.props.album.title}</li>
+              <li>By: <Artist id={this.props.album.artist_id} /></li>
               <br></br>
               <li>Description: {this.props.album.description}</li>
             </div>
-          </ul>
-          <ul className="album-props-2">
-           
-              <li>{photo}</li>
-
           </ul>
         </section>
         <Footer_auth />

@@ -410,6 +410,11 @@ header{
   float: left;
   width: 10em;
   margin-right: 1em;
+  text-align: center;
+}
+
+.user-profile-info input {
+  text-align: center;
 }
 
 #profile-form{

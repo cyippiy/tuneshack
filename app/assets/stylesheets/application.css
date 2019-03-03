@@ -408,13 +408,14 @@ header{
 
 .user-profile-info label{
   float: left;
-  width: 10em;
+  width: 18em;
   margin-right: 1em;
   text-align: center;
 }
 
 .user-profile-info input {
   text-align: center;
+  border-radius: 3px;
 }
 
 #profile-form{

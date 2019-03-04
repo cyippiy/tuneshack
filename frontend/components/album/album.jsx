@@ -64,6 +64,11 @@ class AlbumDetails extends React.Component{
         <AuthNavBarContainer />
         <section className="auth-body">
           <ul className="album-props">
+            <div className="album-text">
+              <h2>{this.props.album.title}</h2>
+              <li>By: <Artist id={this.props.album.artist_id} /></li>
+              <br></br>
+            </div>
             <div className="album-tracks">
               <li>{display}</li>
             </div>
@@ -71,9 +76,9 @@ class AlbumDetails extends React.Component{
           <ul className="album-props-2">
             {photo}
             <div className="album-text">
-              <li>Title: {this.props.album.title}</li>
+              {/* <li>Title: {this.props.album.title}</li>
               <li>By: <Artist id={this.props.album.artist_id} /></li>
-              <br></br>
+              <br></br> */}
               <li>Description: {this.props.album.description}</li>
             </div>
           </ul>

@@ -573,6 +573,14 @@ header{
   justify-content: center;
 }
 
+.album-text h2{
+  font-size: 18px;
+}
+
+.album-text a{
+  text-decoration-color: aquamarine;
+}
+
 .track-render{
   display:flex;
   flex-direction:column;

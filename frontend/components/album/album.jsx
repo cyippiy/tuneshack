@@ -68,6 +68,9 @@ class AlbumDetails extends React.Component{
               <h2>{this.props.album.title}</h2>
               <li>By: <Artist id={this.props.album.artist_id} /></li>
               <br></br>
+              <br />
+              <br />
+              <br />
             </div>
             <div className="album-tracks">
               <li>{display}</li>

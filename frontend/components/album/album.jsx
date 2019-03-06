@@ -65,7 +65,7 @@ class AlbumDetails extends React.Component{
         <section className="auth-body">
           <ul className="album-props">
             <div className="album-text">
-              <h2>{this.props.album.title}</h2>
+              <h3>{this.props.album.title}</h3>
               <li>By: <Artist id={this.props.album.artist_id} /></li>
               <br></br>
               <br />

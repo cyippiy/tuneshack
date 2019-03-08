@@ -262,6 +262,7 @@ header{
 
 .user-profile-body{
   background-color: lightgrey;
+  /* background-image: linear-gradient(#a1c4fd → #c2e9fb); */
 }
 
 .auth-nav-left{
@@ -439,6 +440,7 @@ header{
 
 .album-index-body{
   margin-top: 75px;
+  /* background-image: linear-gradient(#a1c4fd → #c2e9fb); */
 }
 
 .auth-body{
@@ -446,6 +448,7 @@ header{
   margin-bottom: 10px;
   display: flex;
   justify-content: space-around;
+  background-image: linear-gradient(#a1c4fd, #c2e9fb);
 }
 
 .user-profile-albums img{

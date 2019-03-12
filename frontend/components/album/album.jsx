@@ -86,7 +86,7 @@ class AlbumDetails extends React.Component{
             </div>
           </ul>
         </section>
-        <Footer_auth />
+        {/* <Footer_auth /> */}
       </section>
   )}
 }

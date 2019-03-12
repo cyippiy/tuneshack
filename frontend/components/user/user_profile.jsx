@@ -90,7 +90,7 @@ class UserProfile extends React.Component{
             <h3>Description: {description}</h3>
           </section>
         </section>
-        <Footer_auth />
+        {/* <Footer_auth /> */}
       </section>
     );
   }

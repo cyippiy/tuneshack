@@ -394,8 +394,10 @@ header{
 }
 
 .user-profile{
-  margin-top: 75px;
-  min-height: 90vh;
+  /* margin-top: 50px; */
+  margin-bottom: -5px;
+  z-index: 1;
+  /* min-height: 90vh; */
 }
 .user-profile-body{
   display: flex;
@@ -441,17 +443,18 @@ header{
   margin-top: 75px;
 }
 
-.album-index-body{
-  margin-top: 75px;
+.album-index{
+  /* margin-top: 75px; */
   /* background-image: linear-gradient(#a1c4fd → #c2e9fb); */
+  flex: 1;
 }
 
 .auth-body{
-  margin-top: 75px;
+  margin-top: 50px;
   flex: 1 0 auto;
   /* margin-bottom: -20px; */
   display: flex;
-  min-height: 100vh;
+  min-height: 90vh;
   justify-content: space-around;
   background-image: linear-gradient(#a1c4fd, #c2e9fb);
 }
@@ -575,6 +578,7 @@ header{
 .album-props-2 img{
   max-height: 350px;
   max-width: 350px;
+  border-radius: 5%;
 }
 
 .album-text{
@@ -710,8 +714,10 @@ header{
 /* album styliing */
 .album-details{
   flex: 1;
-  min-height: 90vh;
+  /* min-height: 90vh; */
   position: relative;
+  margin-bottom: -5px;
+  z-index: 1;
   /* height: 90vh; */
 }
 
@@ -725,6 +731,7 @@ header{
   min-height: 100%;
   /* position: absolute; */
   bottom: 0;
+  z-index: 2;
 }
 
 .wrapper{

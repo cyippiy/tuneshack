@@ -40,7 +40,7 @@ const footer_unauth = () => {
             </section>
             <section className="foot-col" />
             <section className="foot-col">
-                <h2>Created By: Chris Yip</h2>
+                {/* <h2>Created By: Chris Yip</h2>
                 <i className="fas fa-igloo"></i>
 
                 <i className="fab fa-linkedin-in" />
@@ -50,7 +50,7 @@ const footer_unauth = () => {
 
                 <a className="contact-links" href="https://github.com/cyippiy">
                     GitHub
-              </a>
+              </a> */}
             </section>
         </section>
     )

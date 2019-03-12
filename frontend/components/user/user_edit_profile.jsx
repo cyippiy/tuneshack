@@ -93,7 +93,7 @@ class UserEditProfile extends React.Component{
           </section>
         
         </section>
-        <Footer_auth />
+        {/* <Footer_auth /> */}
       </section>
     );
     }

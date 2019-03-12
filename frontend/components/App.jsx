@@ -17,11 +17,11 @@ import AlbumDetailsContainer from './album/album_container';
 import AlbumIndexContainer from './album/album_index_container';
 import Home from './home.jsx';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-
+import Footer from './footer_bar/footer_auth';
 
 const App = () => {
   return(
-    <div>
+    <div className="wrapper">
       <Switch>
         <ProtectedRoute exact path="/profile" component={UserEditProfileContainer} />
         <ProtectedRoute path="/artists/:id" component={UserProfileContainer} />
@@ -31,6 +31,7 @@ const App = () => {
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <Route exact path="/" component={Home} />
       </Switch>
+      <Footer />
     </div>
   )
 };

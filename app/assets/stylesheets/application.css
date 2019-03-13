@@ -437,6 +437,7 @@ header{
 .profile {
   max-height: 120px;
   max-width: 120px;
+  margin-top: 20px;
 }
 
 .song-details{
@@ -599,7 +600,12 @@ header{
   display:flex;
   flex-direction:column;
   margin: 0 auto;
-  align-items: center;
+  align-items: left;
+  margin-bottom: 10px;
+}
+
+.album-details h3{
+  font-size: 145%;
 }
 
 .splash-icons{

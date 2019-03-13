@@ -51,6 +51,7 @@ class UserEditProfile extends React.Component{
               </Link>
               <p>Title: {album.title}</p>
               <p>Description: {album.description}</p>
+              <br />
             </section>
           )
         })

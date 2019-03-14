@@ -67,7 +67,6 @@ class AlbumDetails extends React.Component{
             <div className="album-text">
               <h3>{this.props.album.title}</h3>
               <li>By: <Artist id={this.props.album.artist_id} /></li>
-              <br></br>
               <br />
               <br />
               <br />
@@ -82,6 +81,7 @@ class AlbumDetails extends React.Component{
               {/* <li>Title: {this.props.album.title}</li>
               <li>By: <Artist id={this.props.album.artist_id} /></li>
               <br></br> */}
+              <br></br>
               <li>Description: {this.props.album.description}</li>
             </div>
           </ul>

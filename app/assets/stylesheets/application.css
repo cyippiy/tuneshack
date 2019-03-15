@@ -604,6 +604,10 @@ header{
   margin-bottom: 10px;
 }
 
+.track-render li{
+  font-size: 130%;
+}
+
 .album-details h3{
   font-size: 145%;
 }

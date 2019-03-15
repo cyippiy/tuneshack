@@ -47,6 +47,7 @@ class AlbumDetails extends React.Component{
           display = arr.map(song => {
             return <section className="track-render" key={song.id}>
                 <li>{song.track_number}. {song.title}</li>
+                <br />
                 <ReactAudioPlayer src={song.songUrl} controls />
                 {/* <h3>Track Number: {song.track_number}</h3> */}
               </section>;

@@ -737,9 +737,7 @@ header{
   justify-content: space-between;
   background: #848484;
   color: white;
-  /* margin-top: 50px; */
   min-height: 100%;
-  /* position: absolute; */
   bottom: 0;
   z-index: 2;
 }

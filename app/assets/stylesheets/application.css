@@ -724,11 +724,9 @@ header{
 /* album styliing */
 .album-details{
   flex: 1;
-  /* min-height: 90vh; */
   position: relative;
   margin-bottom: -5px;
   z-index: 1;
-  /* height: 90vh; */
 }
 
 .footer-auth{

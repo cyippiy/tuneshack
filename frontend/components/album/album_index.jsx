@@ -41,7 +41,6 @@ class AlbumIndex extends React.Component{
         <section className="auth-body">
           {display}
         </section>
-        {/* <Footer_auth /> */}
       </section>
     )
   }

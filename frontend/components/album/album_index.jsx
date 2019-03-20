@@ -38,6 +38,8 @@ class AlbumIndex extends React.Component{
       <section className="album-index">
         <AuthNavBarContainer />
         <section className="auth-body">
+          <br />
+          <br />
           {display}
         </section>
       </section>

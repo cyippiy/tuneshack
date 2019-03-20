@@ -27,7 +27,6 @@ class AlbumIndex extends React.Component{
                 <img src={album.photoUrl} />
               </Link>
               <p>Title: {album.title}</p>
-              <p>Description: {album.description}</p>
               <br />
             </section>
           )

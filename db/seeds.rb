@@ -54,14 +54,23 @@ path = File.join(Rails.root, 'app', "assets", "images","city background.jpg")
 user5.photo.attach(io: File.open(path), filename: "city background.jpg")
 user5.save
 
+user5=User.new(email:"zektbach@zektbach.com", password: "111111", band_name: "Zektbach",
+description: "EMO SONGS")
+path = File.join(Rails.root, 'app', "assets", "images","epic of zektbach masinowa.jpg")
+user5.photo.attach(io: File.open(path), filename: "epic of zektbach masinowa.jpg")
+user5.save
+
+
 album=Album.new(artist_id: 1, title: "bemani music",description: "bemani music!");
 path = File.join(Rails.root, 'app', "assets", "images","blankalbum.jpg")
 album.photo.attach(io: File.open(path), filename: "blankalbum.jpg")
 album.save
+
 album2=Album.new(artist_id: 2, title: "Sick beats 1",description: "songs from the legend");
 path = File.join(Rails.root, 'app', "assets", "images","blankalbum.jpg")
 album2.photo.attach(io: File.open(path), filename: "blankalbum.jpg")
 album2.save
+
 album3=Album.new(artist_id: 2, title: "Sick beats 2",description: "another song");
 path = File.join(Rails.root, 'app', "assets", "images","blankalbum.jpg")
 album3.photo.attach(io: File.open(path), filename: "blankalbum.jpg")
@@ -86,6 +95,12 @@ album7=Album.new(artist_id: 5, title: "Deep stuff",description: "deeep vibes");
 path = File.join(Rails.root, 'app', "assets", "images","soulmusic.jpg")
 album7.photo.attach(io: File.open(path), filename: "soulmusic.jpg")
 album7.save
+
+album8=Album.new(artist_id: 8, title: "The Epic of Zektbach",description: "Long ago in a far away land, there was a war between three factions. this is their story");
+path = File.join(Rails.root, 'app', "assets", "images","epic of zektbach masinowa.jpg")
+album8.photo.attach(io: File.open(path), filename: "epic of zektbach masinowa.jpg")
+album8.save
+
 
 
 song = Song.new(album_id: 1, title: "Yamabiko", track_number: 1)
@@ -142,3 +157,24 @@ song9 = Song.new(album_id: 7, title: "No Peace", track_number: 2)
 path=File.join(Rails.root, 'app', "assets", "songs","No Peace.mp3")
 song9.track.attach(io: File.open(path), filename: "No Peace.mp3")
 song9.save
+
+song10 = Song.new(album_id: 8, title: " Ark Ouroboros", track_number: 1)
+path=File.join(Rails.root, 'app', "assets", "songs","ark.mp3")
+song10.track.attach(io: File.open(path), filename: "ark.mp3")
+song10.save
+
+song11 = Song.new(album_id: 8, title: " Fragment", track_number: 2)
+path=File.join(Rails.root, 'app', "assets", "songs","fragment.mp3")
+song11.track.attach(io: File.open(path), filename: "fragment.mp3")
+song11.save
+
+song12 = Song.new(album_id: 8, title: " Overture", track_number: 3)
+path=File.join(Rails.root, 'app', "assets", "songs","overture.mp3")
+song12.track.attach(io: File.open(path), filename: "overture.mp3")
+song12.save
+
+song13 = Song.new(album_id: 8, title: " Aria te'Laria", track_number: 3)
+path=File.join(Rails.root, 'app', "assets", "songs","aria te_Laria.mp3")
+song13.track.attach(io: File.open(path), filename: "aria te_Laria.mp3")
+song13.save
+

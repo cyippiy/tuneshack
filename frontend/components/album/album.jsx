@@ -5,6 +5,7 @@ import ReactAudioPlayer from 'react-audio-player';
 import MusicPlayer from '../music_player/music_player';
 import Footer_auth from '../footer_bar/footer_auth';
 import Artist from '../artist/artist_container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class AlbumDetails extends React.Component{
   constructor(props){
@@ -60,14 +61,16 @@ class AlbumDetails extends React.Component{
     }
 
 
-    return(
+    return (
       <section className="album-details">
         <AuthNavBarContainer />
         <section className="auth-body">
           <ul className="album-props">
             <div className="album-text">
               <h3>{this.props.album.title}</h3>
-              <li>By: <Artist id={this.props.album.artist_id} /></li>
+              <li>
+                By: <Artist id={this.props.album.artist_id} />
+              </li>
               <br />
               <br />
               <br />
@@ -82,19 +85,17 @@ class AlbumDetails extends React.Component{
               {/* <li>Title: {this.props.album.title}</li>
               <li>By: <Artist id={this.props.album.artist_id} /></li>
               <br></br> */}
-              <br></br>
+              <br />
               <li>{this.props.album.description}</li>
             </div>
           </ul>
           <ul className="album-props-3">
-              <h3>Artist details</h3>
-              <i className="fab fa-font-awesome">Test</i>	
-
+            <h3>Artist details</h3>
           </ul>
         </section>
         {/* <Footer_auth /> */}
       </section>
-  )}
+    );}
 }
 
 export default AlbumDetails;

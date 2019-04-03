@@ -18,6 +18,11 @@ import AlbumIndexContainer from './album/album_index_container';
 import Home from './home.jsx';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Footer from './footer_bar/footer_auth';
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { faUserCog } from "@fortawesome/free-solid-svg-icons";
+
+library.add(fab, faUserCog);
 
 const App = () => {
   return(

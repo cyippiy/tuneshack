@@ -88,6 +88,8 @@ class AlbumDetails extends React.Component{
           </ul>
           <ul className="album-props-3">
               <h3>Artist details</h3>
+              <i className="fab fa-font-awesome">Test</i>	
+
           </ul>
         </section>
         {/* <Footer_auth /> */}

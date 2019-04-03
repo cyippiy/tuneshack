@@ -61,42 +61,42 @@ user5.photo.attach(io: File.open(path), filename: "epic of zektbach masinowa.jpg
 user5.save
 
 
-album=Album.new(artist_id: 1, title: "bemani music",description: "bemani music!");
-path = File.join(Rails.root, 'app', "assets", "images","blankalbum.jpg")
-album.photo.attach(io: File.open(path), filename: "blankalbum.jpg")
+album=Album.new(artist_id: 1, title: "bemani music",description: "bemani music! some of the hottest tracks from DDR to beatmania");
+path = File.join(Rails.root, 'app', "assets", "images","kors-k.jpg")
+album.photo.attach(io: File.open(path), filename: "kors-k.jpg")
 album.save
 
-album2=Album.new(artist_id: 2, title: "Sick beats 1",description: "songs from the legend");
+album2=Album.new(artist_id: 2, title: "Sick beats 1",description: "songs from the legend. Here was his first track of goodness");
 path = File.join(Rails.root, 'app', "assets", "images","blankalbum.jpg")
 album2.photo.attach(io: File.open(path), filename: "blankalbum.jpg")
 album2.save
 
-album3=Album.new(artist_id: 2, title: "Sick beats 2",description: "another song");
+album3=Album.new(artist_id: 2, title: "Sick beats 2",description: "Another album designed to make you feel good. RIP to the legend");
 path = File.join(Rails.root, 'app', "assets", "images","blankalbum.jpg")
 album3.photo.attach(io: File.open(path), filename: "blankalbum.jpg")
 album3.save
 
-album4=Album.new(artist_id: 4, title: "MARS BRUNO",description: "some top notch songs");
+album4=Album.new(artist_id: 4, title: "MARS BRUNO",description: "some top notch songs. Let's jam to his goodness.");
 path = File.join(Rails.root, 'app', "assets", "images","brunomars.png")
 album4.photo.attach(io: File.open(path), filename: "brunomars.png")
 album4.save
 
-album5=Album.new(artist_id: 5, title: "beyond the moon",description: "space looks nice");
+album5=Album.new(artist_id: 5, title: "beyond the moon",description: "space looks nice. wouldn't you agree?");
 path = File.join(Rails.root, 'app', "assets", "images","elevven.png")
 album5.photo.attach(io: File.open(path), filename: "elevven.png")
 album5.save
 
-album6=Album.new(artist_id: 6, title: "Park of Lincoln greatest hits",description: "some top notch songs");
+album6=Album.new(artist_id: 6, title: "Park of Lincoln greatest hits",description: "some top notch songs. Let these early 2000 hits make you jam out");
 path = File.join(Rails.root, 'app', "assets", "images","city background.jpg")
 album6.photo.attach(io: File.open(path), filename: "city background.jpg")
 album6.save
 
-album7=Album.new(artist_id: 5, title: "Deep stuff",description: "deeep vibes");
+album7=Album.new(artist_id: 5, title: "Deep stuff",description: "deeep vibes. for the deep house lovers.");
 path = File.join(Rails.root, 'app', "assets", "images","soulmusic.jpg")
 album7.photo.attach(io: File.open(path), filename: "soulmusic.jpg")
 album7.save
 
-album8=Album.new(artist_id: 8, title: "The Epic of Zektbach",description: "Long ago in a far away land, there was a war between three factions. this is their story");
+album8=Album.new(artist_id: 8, title: "The Epic of Zektbach",description: "Long ago in a far away land, there was a war between three factions. this is their story. ");
 path = File.join(Rails.root, 'app', "assets", "images","epic of zektbach masinowa.jpg")
 album8.photo.attach(io: File.open(path), filename: "epic of zektbach masinowa.jpg")
 album8.save

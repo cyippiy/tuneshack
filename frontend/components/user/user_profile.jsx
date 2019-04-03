@@ -45,8 +45,8 @@ class UserProfile extends React.Component{
               <Link to={`/albums/${album.id}`} className="img">
                 <img src={album.photoUrl} />
               </Link>
-              <p>Title: {album.title}</p>
-              <p>Description: {album.description}</p>
+              <p>{album.title}</p>
+              <p>{album.description}</p>
             </section>
           )
         })

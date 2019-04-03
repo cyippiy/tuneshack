@@ -83,8 +83,10 @@ class AlbumDetails extends React.Component{
               <li>By: <Artist id={this.props.album.artist_id} /></li>
               <br></br> */}
               <br></br>
-              <li>Description: {this.props.album.description}</li>
+              <li>{this.props.album.description}</li>
             </div>
+          </ul>
+          <ul className="album-props-3">
           </ul>
         </section>
         {/* <Footer_auth /> */}

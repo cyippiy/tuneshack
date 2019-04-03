@@ -1,3 +1,49 @@
 // Place all the styles related to the api/albums controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.album-props{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album-props-2{
+  display:flex;
+  flex-direction: column;
+}
+
+.album-props-2 img{
+  max-height: 350px;
+  max-width: 350px;
+  border-radius: 5%;
+}
+
+.album-text{
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.album-text h3{
+  font-size: 18px;
+}
+
+.album-text a{
+  color: blue
+}
+
+.track-render{
+  display:flex;
+  flex-direction:column;
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.track-render li{
+  font-size: 130%;
+}
+
+.album-details h3{
+  font-size: 145%;
+}

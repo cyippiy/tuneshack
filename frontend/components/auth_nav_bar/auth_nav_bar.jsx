@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class AuthNavBar extends React.Component{
   constructor(props){
@@ -34,25 +35,45 @@ class AuthNavBar extends React.Component{
             TuneShack
           </Link>
           <ul>
-            <li><Link to={`/albums/${this.randomDiscover()}`} className="btn">discover</Link></li>
-            <li><Link to="/albums" className="btn">feed</Link></li>
-            <li><form className="search-bar" value="">
-              <input type="text" placeholder="search bar"></input>
-            </form></li>
+            <li>
+              <Link to={`/albums/${this.randomDiscover()}`} className="btn">
+                discover
+              </Link>
+            </li>
+            <li>
+              <Link to="/albums" className="btn">
+                feed
+              </Link>
+            </li>
+            <li>
+              <form className="search-bar" value="">
+                <input type="text" placeholder="search bar" />
+              </form>
+            </li>
           </ul>
         </section>
 
         <section className="auth-nav-right">
           <ul className="auth-nav-ul-right">
             <li>
-              <Link to="/profile" className="btn">{greeting}</Link>
+              <Link to="/profile" className="btn">
+                {greeting}
+              </Link>
             </li>
             <li>
               <div className="dropdown">
-                <button className="dropbtn">gear</button>
+                <button className="dropbtn">
+                  <FontAwesomeIcon icon="user-cog" />
+                </button>
                 <ul className="dropdown-content">
                   <li>
-                    <Link to="/" className="btn" onClick={()=>this.props.logout()}>log out</Link>
+                    <Link
+                      to="/"
+                      className="btn"
+                      onClick={() => this.props.logout()}
+                    >
+                      log out
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -60,7 +81,7 @@ class AuthNavBar extends React.Component{
           </ul>
         </section>
       </header>
-    )
+    );
   }
 }
 

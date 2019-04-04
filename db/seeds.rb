@@ -13,19 +13,19 @@ Song.destroy_all
 Song.reset_sequence_name
 
 user=User.new(email:"chris@korsk.com", password: "111111", band_name: "Kors K",
-description: "i'm kors k")
+description: "Kors K is a legend in the bemani scene. With over 20 years of making a variety of music, you'll recognize his signature beats anywhere.")
 path = File.join(Rails.root, 'app', "assets", "images","duetomorrow.jpg")
 user.photo.attach(io: File.open(path), filename: "duetomorrow.jpg")
 user.save
 
 user1=User.new(email:"beatsguy@whatever.com", password: "111111", band_name: "Nujabez",
-description: "my beats are sick")
+description: "The late Nujabez was a legend in the underground hip hop scene. Because of him, the 90s style hip hop beats movement still continues to this day. RIP Nujabez")
 path = File.join(Rails.root, 'app', "assets", "images","nujabes.jpg")
 user1.photo.attach(io: File.open(path), filename: "nujabes.jpg")
 user1.save
 
 user2=User.new(email:"wavemusic@wavemusic.com", password: "111111", band_name: "Wave Music",
-description: "feels good music")
+description: "This Indian Duo from Northern California are brothers with a passion in music. ")
 path = File.join(Rails.root, 'app', "assets", "images","wavemusic.jpg")
 user2.photo.attach(io: File.open(path), filename: "wavemusic.jpg")
 user2.save

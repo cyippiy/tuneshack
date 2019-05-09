@@ -11,7 +11,7 @@ class Api::UsersController < ApplicationController
   end
 
   def index
-    @users = User.all
+      @users = User.all
   end
 
   def show
@@ -39,4 +39,11 @@ class Api::UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:id, :email,:password,:band_name,:description,:photo)
   end
+
+  def search
+    search = params[:search]
+    @user = User.where('lower(name) like ?', "%#{search.downcase}%").limit(5)
+    render :index
+  end
+
 end

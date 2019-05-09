@@ -47,7 +47,7 @@ class AuthNavBar extends React.Component{
             </li>
             <li>
               <form className="search-bar" value="">
-                <input type="text" placeholder="search bar" />
+                <input type="text" className="search" placeholder="search bar" />
               </form>
             </li>
           </ul>

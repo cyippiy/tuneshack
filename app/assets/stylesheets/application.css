@@ -174,8 +174,13 @@ header{
   display:inline-block;
   align-content: flex-end;
   color: grey;
-  cursor: not-allowed;
-  /* text-align: center; */
+  /* cursor: not-allowed; */
+  text-align: center;
+  /* width:300px; */
+}
+
+.search-bar > input[type="text"]:focus{
+  width:400px;
 }
 
 .nav-right-links{

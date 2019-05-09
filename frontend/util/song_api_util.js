@@ -17,4 +17,12 @@ export const fetchSong = id => {
     method: "GET",
     url: `api/songs/${id}`
   })
-}
+};
+
+export const fetchSearchSongs = (search) => {
+  return $.ajax({
+    method: "GET",
+    url: "api/songs/search",
+    data: {search}
+  })
+};

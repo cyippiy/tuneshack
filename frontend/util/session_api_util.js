@@ -26,7 +26,7 @@ export const fetchUser = (id) => {
     method: "GET",
     url: `api/users/${id}`
   })
-}
+};
 
 export const editUser = (user) => {
   return $.ajax({
@@ -34,4 +34,12 @@ export const editUser = (user) => {
     url: `api/users/${user.id}`,
     data: {user}
   })
-}
+};
+
+export const fetchSearchUsers = (search) => {
+  return $.ajax({
+    method: "GET",
+    url: "api/users/search",
+    data: {search}
+  })
+};

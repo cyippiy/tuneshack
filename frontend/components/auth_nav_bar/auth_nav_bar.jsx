@@ -63,17 +63,17 @@ class AuthNavBar extends React.Component{
             <li>
               <div className="dropdown">
                 <button className="dropbtn">
-                  <FontAwesomeIcon icon="user-cog" />
+                  <FontAwesomeIcon icon="user-cog" onClick={() => this.props.logout()}/>
                 </button>
                 <ul className="dropdown-content">
                   <li>
-                    <Link
+                    {/* <Link
                       to="/"
                       className="btn"
                       onClick={() => this.props.logout()}
                     >
                       log out
-                    </Link>
+                    </Link> */}
                   </li>
                 </ul>
               </div>

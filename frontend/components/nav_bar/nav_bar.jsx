@@ -5,7 +5,7 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import HomeContainer from '../home.jsx';
 import Img from 'react-image';
-
+import SearchBar from '../search_bar/search_bar'
 
 
 class NavBar extends React.Component{
@@ -86,9 +86,10 @@ class NavBar extends React.Component{
 
           <section className="nav-right">
             <section className="nav-right-search">
-              <form className="search-bar" value="">
+              {/* <form className="search-bar" value="">
                 <input type="text" placeholder="search bar"></input>
-              </form>
+              </form> */}
+              <SearchBar />
             </section>
 
             <section className="nav-right-links">

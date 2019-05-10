@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     # resources :users, only: [:create, :index, :show, :update]
     resources :users, only: [:create, :show, :index, :update] do
+      collection do
+        get :search
+      end
       resources :albums, only: [:index, :create] do 
         collection do
           get :search

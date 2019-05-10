@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import SearchBar from '../search_bar/search_bar';
 
 class AuthNavBar extends React.Component{
   constructor(props){
@@ -46,9 +47,10 @@ class AuthNavBar extends React.Component{
               </Link>
             </li>
             <li>
-              <form className="search-bar" value="">
+              <SearchBar />
+              {/* <form className="search-bar" value="">
                 <input type="text" className="search" placeholder="search bar" />
-              </form>
+              </form> */}
             </li>
           </ul>
         </section>

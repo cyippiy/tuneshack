@@ -23,6 +23,13 @@ class Api::SongsController < ApplicationController
     end
   end
 
+  def search
+    search = params[:search].downcase
+    @songs = Song.where('lower(title) like ?', "%#{search}%").limit(5)
+    render "api/songs/index"
+  end
+
+
   def song_params
     params.require(:song).permit(:artist_id,:title,:track_number,:track)
   end

@@ -41,8 +41,8 @@ class Api::UsersController < ApplicationController
   end
 
   def search
-    search = params[:search]
-    @user = User.where('lower(band_name) like ?', "%#{search}%").limit(5)
+    search = params[:search].downcase
+    @users = User.where('lower(band_name) like ?', "%#{search}%").limit(5)
     render "api/users/index"
   end
 

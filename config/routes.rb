@@ -8,9 +8,7 @@ Rails.application.routes.draw do
         get :search
       end
       resources :albums, only: [:index, :create] do 
-        collection do
           get :search
-        end
       end
     end
     resource :session, only: [:create, :destroy]

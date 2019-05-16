@@ -41,13 +41,20 @@ export const signup = user => dispatch => {
 };
 
 export const logout = () => dispatch => {
-  return APIUtil.logout().then(user => dispatch(logoutCurrentUser()))
+  return APIUtil.logout().then(user => dispatch(logoutCurrentUser()),
+  err => dispatch(receiveErrors(err.responseJSON)))
 };
 
 export const fetchUser = id => dispatch => {
-  return APIUtil.fetchUser(id).then(user => dispatch(receiveUser(user)))
+  return APIUtil.fetchUser(id).then(user => dispatch(receiveUser(user)),
+  err => dispatch(receiveErrors(err.responseJSON)))
 };
 export const editUser = user => dispatch => {
   return APIUtil.editUser(user).then(user => dispatch(receiveUser(user)),
   err => dispatch(receiveErrors(err.responseJSON)))
 };
+
+export const fetchSearchUsers = search => dispatch => {
+  return APIUtil.fetchSearchUsers(search).then(users => dispatch(receiveUsers(users)),
+  err => dispatch(receiveErrors(err.responseJSON)))
+}

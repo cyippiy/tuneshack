@@ -31,3 +31,8 @@ export const fetchSong = (id) => dispatch => {
   return SongAPIUtil.fetchSong(id).then(song => dispatch(receiveSong(song)),
   err => dispatch(receiveErrors(err.responseJSON)))
 }
+
+export const fetchSearchSongs = (search) => dispatch => {
+  return SongAPIUtil.fetchSearchSongs(search).then(songs => dispatch(receiveSongs(songs)),
+  err => dispatch(receiveErrors(err.responseJSON)))
+}

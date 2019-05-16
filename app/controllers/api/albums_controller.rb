@@ -23,6 +23,13 @@ class Api::AlbumsController < ApplicationController
     end
   end
 
+    def search
+    search = params[:search].downcase
+    @albums = Album.where('lower(title) like ?', "%#{search}%").limit(5)
+    render "api/albums/index"
+  end
+
+
   def album_params
     params.require(:album).permit(:artist_id,:title,:description,:photo)
   end

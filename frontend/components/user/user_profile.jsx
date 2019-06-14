@@ -11,11 +11,20 @@ class UserProfile extends React.Component{
       user: this.props.user,
       band_name: "",
       email: "",
-      description: ""
+      description: "",
+      photoUrl: ""
     }
   }
   componentDidMount(){
-    this.props.fetchUser(this.props.id);
+    this.props.fetchUser(this.props.id)
+      .then(res => {
+        this.setState({
+          email: res.user.email,
+          id: res.user.id,
+          band_name: res.user.band_name,
+          photoUrl: res.user.photoUrl
+        });
+      });
     this.props.fetchAlbumsUser(this.props.id);
     // this.setState({band_name: this.props.user.band_name, email: this.props.user.email,
     // description: this.props.user.description});

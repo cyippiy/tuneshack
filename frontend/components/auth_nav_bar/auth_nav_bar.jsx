@@ -1,31 +1,48 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import SearchBar from '../search_bar/search_bar';
+import SearchBar from '../search_bar/search_bar_container';
 
 class AuthNavBar extends React.Component{
   constructor(props){
     super(props);
+    this.state = {
+      email: "",
+      band_name: "",
+      id: ""
+    }
+    this.handleLogout = this.handleLogout.bind(this);
   }
 
   componentDidMount(){
-    this.props.fetchUser(this.props.id);
+    this.props.fetchUser(this.props.id)
+      .then(res => {
+        this.setState({
+          email: res.user.email,
+          id: res.user.id,
+          band_name: res.user.band_name
+        });
+      });
     // this.props.fetchAlbums();
   }
 
   randomDiscover(){
     return Math.floor(Math.random() * (3-1)) + 1;
   }
+  handleLogout(){
+    this.setState({ email: "", band_name: "", id: "" });
+    this.props.logout();
+  }
 
 
   render(){
     let greeting = " ";
-    if (this.props.id !== null){
-      if (this.props.currentUser.band_name !== null){
-        greeting = this.props.currentUser.band_name;
+    if (this.state.id !== ""){
+      if (this.state.band_name !== ""){
+        greeting = this.state.band_name;
       }
       else{
-        greeting = this.props.currentUser.email;
+        greeting = this.state.email;
       }
     }
 
@@ -65,7 +82,7 @@ class AuthNavBar extends React.Component{
             <li>
               <div className="dropdown">
                 <button className="dropbtn">
-                  <FontAwesomeIcon icon="user-cog" onClick={() => this.props.logout()}/>
+                  <FontAwesomeIcon icon="user-cog" onClick={() => this.handleLogout()}/>
                 </button>
                 <ul className="dropdown-content">
                   <li>

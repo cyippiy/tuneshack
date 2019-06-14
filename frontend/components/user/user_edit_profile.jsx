@@ -9,11 +9,26 @@ import Footer_auth from "../footer_bar/footer_auth";
 class UserEditProfile extends React.Component{
   constructor(props){
     super(props);
-    this.state = this.props.currentUser;
+    this.state = {
+      user: this.props.user,
+      band_name: "",
+      email: "",
+      description: "",
+      photoUrl: "",
+      id: ""
+    }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   componentDidMount(){
-    this.props.fetchUser(this.props.id);
+    this.props.fetchUser(this.props.id)
+      .then(res => {
+        this.setState({
+          email: res.user.email,
+          id: res.user.id,
+          band_name: res.user.band_name,
+          photoUrl: res.user.photoUrl
+        });
+      });
     this.props.fetchAlbumsUser(this.props.id);
   }
 
@@ -30,7 +45,7 @@ class UserEditProfile extends React.Component{
 
   render(){
     let band_name = " ";
-    if (typeof this.props.currentUser === undefined){
+    if (this.state.band_name === ""){
       band_name = " ";
     }
     else{
@@ -58,8 +73,8 @@ class UserEditProfile extends React.Component{
       )
     }
     let photo = <img />;
-    if (this.props.currentUser.photoUrl){
-      photo = <img className="profile" src={this.props.currentUser.photoUrl} />
+    if (this.state.photoUrl){
+      photo = <img className="profile" src={this.state.photoUrl} />
     }
 
     return (

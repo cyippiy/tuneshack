@@ -4,8 +4,8 @@ import { fetchUser } from '../../actions/session_actions';
 
 const mapStateToProps = (state,ownProps) => {
     return {
-        id: ownProps.id,
-        artist: state.entities.users[ownProps.id]
+        // id: ownProps.match.params.id,
+        // artist: state.entities.users[ownProps.id]
     }
 }
 

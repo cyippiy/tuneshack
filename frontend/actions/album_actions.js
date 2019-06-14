@@ -32,6 +32,6 @@ export const fetchAlbum = (id) => dispatch => {
   err => dispatch(receiveErrors(err.responseJSON)))
 }
 export const fetchSearchAlbums = (search) => dispatch => {
-  return AlbumAPIUtil.fetchSearchALbums(search).then(albums => dispatch(receiveAlbums(albums))),
+  return AlbumAPIUtil.fetchSearchAlbums(search).then(albums => dispatch(receiveAlbums(albums))),
   err => dispatch(receiveErrors(err.responseJSON))
 }

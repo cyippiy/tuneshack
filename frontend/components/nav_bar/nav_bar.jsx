@@ -5,68 +5,80 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import HomeContainer from '../home.jsx';
 import Img from 'react-image';
-import SearchBar from '../search_bar/search_bar'
+import SearchBar from '../search_bar/search_bar_container';
 
 
 class NavBar extends React.Component{
   constructor(props){
     super(props);
+    this.state = {
+      email: "",
+      band_name: "",
+      id: ""
+    }
+    this.handleLogout = this.handleLogout.bind(this);
   }
 
   componentDidMount(){
     let id = this.props.id;
     if (id !== null){
-      this.props.fetchUser(id);
+      this.props.fetchUser(id)
+        .then(res=>{
+          this.setState({email:res.user.email,
+            id:res.user.id,
+            band_name:res.user.band_name});
+        })
     }
+  }
+
+  handleLogout(){
+    this.setState({email: "",band_name: "", id: ""});
+    this.props.logout();
   }
 
   render(){
     let display;
     let greeting;
-    if (this.props.id !== null){
-      if (this.props.currentUser.band_name !== null){
-        greeting = this.props.currentUser.band_name;
-      }
-      else{
-        greeting = this.props.currentUser.email;
-      }
-    }
-    if (this.props.id === null){
+
+    if (this.state.email !== ""){
       display = (
-          <ul className="nav-ul-right">
-            <li>
-              <Link className="btn" to="/signup">sign up</Link>
-            </li>
-            <li>
-              <Link className="btn" to="/login">log in</Link>
-            </li>
-          </ul>
-      )}
-      else{
-        if (!this.props.currentUser){
-          display = (<ul></ul>);
-        }
-        else{
-          display = (
-            <ul className="nav-ul-right">
-              <li>
-                <Link to="/" className="btn">discover</Link>
-              </li>
-              <li>
-                <Link to="/" className="btn" onClick={()=>this.props.logout()}>log out</Link>
-              </li>
-            </ul>
-          )}
+        <ul className="nav-ul-right">
+          <li>
+            <Link to="/" className="btn">discover</Link>
+          </li>
+          <li>
+            <Link to="/" className="btn" onClick={() => this.handleLogout()}>log out</Link>
+          </li>
+        </ul>
+      );
+      if (this.state.band_name !== "") {
+        greeting = this.state.band_name;
       }
-    const username = this.props.id !== null ? (
+      else {
+        greeting = this.state.email;
+      }
+    } else {
+      display = (
+        <ul className="nav-ul-right">
+          <li>
+            <Link className="btn" to="/signup">sign up</Link>
+          </li>
+          <li>
+            <Link className="btn" to="/login">log in</Link>
+          </li>
+        </ul>
+      )
+    }
+
+    const username = this.state.email !== "" ? (
       <ul className="nav-ul-left">
         <li className="nav-greetings">Hello, {greeting}</li>
         <li><Link to="/profile" className="btn">feed</Link></li>
         <li><Link to="/profile" className="btn">collection</Link></li>
       </ul>
     ) : (
-      <ul className="nav-ul-left"></ul>
-    )
+        <ul className="nav-ul-left"></ul>
+      )
 
     return (
         <section className="nav-bar">

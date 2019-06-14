@@ -9,16 +9,20 @@ class SearchBar extends React.Component{
             typingTimeout: 0
         }
         this.handleInputChange = this.handleInputChange.bind(this);
-        this.search = this.search.bind(this);
+        this.searchAll = this.searchAll.bind(this);
     }
 
-    search() {
+    searchAll() {
         let results = [];
         if (this.state.query){
             if (this.state.query !== ""){
-                searchUsers(this.state.query).then(res => results=[...res]);
+                if (this.props){
+                    this.props.searchUsers(this.state.query);
+                    // .then(res => results=[...res]);
+                }
             }
         }
+        console.table(results);
     }
 
     handleInputChange() {
@@ -28,8 +32,8 @@ class SearchBar extends React.Component{
         this.setState({
             query: this.search.value,
             typingTimeout: setTimeout(() => {
-                this.search()
-            })
+                this.searchAll()
+            },100)
         })
     }
 
@@ -38,7 +42,7 @@ class SearchBar extends React.Component{
             <form className="search-bar" value="">
                 <input type="text" placeholder="Search for"
                 ref={input => this.search = input}
-                onChange={()=>handleInputChange()} />
+                onChange={()=>this.handleInputChange()} />
             </form>
         )
     }

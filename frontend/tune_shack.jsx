@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {signup, login, logout, editUser, fetchUser} from './actions/session_actions';
-import {fetchAlbums, fetchAlbumsUser, fetchAlbum} from './actions/album_actions';
-import {fetchSongs, fetchSongsAlbum, fetchSong} from './actions/song_actions';
+import {signup, login, logout, editUser, fetchUser, fetchSearchUsers} from './actions/session_actions';
+import {fetchAlbums, fetchAlbumsUser, fetchAlbum, fetchSearchAlbums} from './actions/album_actions';
+import {fetchSongs, fetchSongsAlbum, fetchSong, fetchSearchSongs} from './actions/song_actions';
 import configureStore from './store/store';
 import Root from './components/root';
 
@@ -35,6 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchSong = fetchSong;
   window.editUser = editUser;
   window.fetchUser = fetchUser;
+  window.fetchSearchSongs = fetchSearchSongs;
+  window.fetchSearchUsers = fetchSearchUsers;
+  window.fetchSearchAlbums = fetchSearchAlbums;
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;

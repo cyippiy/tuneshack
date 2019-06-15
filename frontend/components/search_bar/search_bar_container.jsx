@@ -4,15 +4,16 @@ import { fetchSearchUsers } from '../../actions/session_actions';
 import { fetchSearchAlbums } from '../../actions/album_actions';
 import { fetchSearchSongs } from '../../actions/song_actions';
 
-const mapStateToProps = state => ({
+// const mapStateToProps = state => ({
 
-});
+// });
 
-const mapDispatchToProps = dispatch => ({
-    searchUsers: search => dispatch(fetchSearchUsers(search)),
-    searchAlbums: search => dispatch(fetchSearchAlbums(search)),
-    searchSongs: search => dispatch(fetchSearchSongs(search)),
+const mapDispatchToProps = dispatch => {
+    return ({
+        searchUsers: user => dispatch(fetchSearchUsers(user)),
+        searchAlbums: albums => dispatch(fetchSearchAlbums(albums)),
+        searchSongs: songs => dispatch(fetchSearchSongs(songs))
+    })
+};
 
-});
-
-export default connect(mapStateToProps,mapDispatchToProps)(SearchBar);
+export default connect(null,mapDispatchToProps)(SearchBar);

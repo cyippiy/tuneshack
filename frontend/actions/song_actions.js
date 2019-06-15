@@ -12,7 +12,7 @@ const receiveSongs = songs =>{
 }
 
 const receiveSong = song => {
-  return{
+  return {
     type: RECEIVE_SONG,
     song
   }

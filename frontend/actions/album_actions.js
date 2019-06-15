@@ -6,7 +6,7 @@ export const RECEIVE_ALBUMS = "RECEIVE_ALBUMS";
 
 const receiveAlbums = albums =>{
   return {
-    type:RECEIVE_ALBUMS,
+    type: RECEIVE_ALBUMS,
     albums
   }
 }
@@ -32,6 +32,6 @@ export const fetchAlbum = (id) => dispatch => {
   err => dispatch(receiveErrors(err.responseJSON)))
 }
 export const fetchSearchAlbums = (search) => dispatch => {
-  return AlbumAPIUtil.fetchSearchAlbums(search).then(albums => dispatch(receiveAlbums(albums))),
-  err => dispatch(receiveErrors(err.responseJSON))
+  return AlbumAPIUtil.fetchSearchAlbums(search).then(albums => dispatch(receiveAlbums(albums)),
+  err => dispatch(receiveErrors(err.responseJSON)))
 }

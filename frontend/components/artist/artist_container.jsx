@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import Artist from './artist';
-import { fetchUser } from '../../actions/session_actions';
+import { fetchSearchUsers } from '../../actions/session_actions';
+import { fetchSearchAlbums } from '../../actions/album_actions';
+import { fetchSearchSongs } from '../../actions/song_actions';
 
 const mapStateToProps = (state,ownProps) => {
     return {
@@ -11,8 +13,10 @@ const mapStateToProps = (state,ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return ({
-        fetchUser: user => dispatch(fetchUser(user))
+        searchUsers: user => dispatch(fetchSearchUsers(user)),
+        searchAlbums: albums => dispatch(fetchSearchAlbums(albums)),
+        searchSongs: songs => dispatch(fetchSearchSongs(songs))
     })
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Artist);
+export default connect(null,null)(Artist);

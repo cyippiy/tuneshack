@@ -25,4 +25,4 @@ export const fetchSearchAlbums = (search) => {
     url: "api/albums/search",
     data: {search}
   })
-}
+};

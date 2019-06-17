@@ -67,11 +67,13 @@ class SearchBar extends React.Component{
         }
         console.table(results);
         return(
-            <form className="search-bar" value="">
-                <input type="text" placeholder="Search for"
-                ref={input => this.search = input}
-                onChange={()=>this.handleInputChange()} />
-            </form>
+            <div>
+                <form className="search-bar" value="">
+                    <input type="text" placeholder="Search for"
+                        ref={input => this.search = input}
+                        onChange={() => this.handleInputChange()} />
+                </form>
+            </div>
         )
     }
 }

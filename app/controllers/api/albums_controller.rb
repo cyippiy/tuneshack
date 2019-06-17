@@ -25,6 +25,7 @@ class Api::AlbumsController < ApplicationController
 
     def search
     search = params[:search].downcase
+    # debugger
     @albums = Album.where('lower(title) like ?', "%#{search}%").limit(5)
     render "api/albums/index"
   end

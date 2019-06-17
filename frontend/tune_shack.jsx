@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {signup, login, logout, editUser, fetchUser, fetchSearchUsers} from './actions/session_actions';
 import {fetchAlbums, fetchAlbumsUser, fetchAlbum, fetchSearchAlbums} from './actions/album_actions';
 import {fetchSongs, fetchSongsAlbum, fetchSong, fetchSearchSongs} from './actions/song_actions';
+import {fetchSearchResults} from './actions/search_actions';
 import configureStore from './store/store';
 import Root from './components/root';
 
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchSearchSongs = fetchSearchSongs;
   window.fetchSearchUsers = fetchSearchUsers;
   window.fetchSearchAlbums = fetchSearchAlbums;
+  window.fetchSearchResults = fetchSearchResults;
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;

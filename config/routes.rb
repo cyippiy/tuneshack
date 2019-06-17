@@ -23,6 +23,11 @@ Rails.application.routes.draw do
         get :search
       end
     end
+    resources :search_bars, only: [:index] do
+      collection do
+        get :search
+      end
+    end
   end
 
   root "static_pages#root"

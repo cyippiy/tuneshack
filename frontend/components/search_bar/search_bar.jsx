@@ -5,7 +5,7 @@ class SearchBar extends React.Component{
         super(props);
         this.state = {
             query: "",
-            results: [],
+            results: {},
             typingTimeout: 0
         }
         this.searchAll = this.searchAll.bind(this);
@@ -22,38 +22,10 @@ class SearchBar extends React.Component{
             if (this.state.query !== ""){
                 if (this.props){
                     // console.log(`searching ${this.state.query}`);
-                    this.props.searchUsers(this.state.query)
-                        .then(res=> {
-                            if (res.users){
-                                let users = [...res.users.users];
-                                results.push(users);
-                            }else{
-                                results.push([]);
-                            }
+                    this.props.searchResults(this.state.query)
+                        .then(res=>{
+                            this.setState({results: res.results});
                         })
-                        // this.props.searchAlbums(this.state.query)
-                        .then(() => this.props.searchAlbums(this.state.query))
-                        .then(res => {
-                            if (res.albums) {
-                                let albums = [...res.albums.albums];
-                                results.push(albums);
-                            } else {
-                                results.push([]);
-                            }
-                        })
-                        .then(() => this.props.searchSongs(this.state.query))
-                        .then(res => {
-                            if (res.songs){
-                                let songs = [...res.songs.songs];
-                                results.push(songs);
-                            }else{
-                                results.push([]);
-                            }
-                        })
-                        .then(()=> this.setState({
-                            results
-                        }));
-                    // .then(res => results=[...res]);
                 }
             }
         }
@@ -80,6 +52,20 @@ class SearchBar extends React.Component{
     }
 
     render(){
+
+        let results = [];
+        if (this.state.results)
+        for(let el in this.state.results){
+            //checks if this is a user
+            if (this.state.results[el].email){
+                results.push("found an artist")
+            }else if (this.state.results[el].album_id){
+                results.push("found a song")
+            }else if (this.state.results[el].artist_id){
+                results.push("found an album")
+            }
+        }
+        console.table(results);
         return(
             <form className="search-bar" value="">
                 <input type="text" placeholder="Search for"

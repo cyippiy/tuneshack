@@ -52,22 +52,19 @@ class AuthNavBar extends React.Component{
           <Link to="/" className="auth-header-link">
             TuneShack
           </Link>
-          <ul>
-            <li>
+          <ul className="auth-header-ul">
+            <li className="auth-header-li">
               <Link to={`/albums/${this.randomDiscover()}`} className="btn">
                 discover
               </Link>
             </li>
-            <li>
+            <li className="auth-header-li">
               <Link to="/albums" className="btn">
                 feed
               </Link>
             </li>
-            <li>
+            <li className="auth-header-li-search">
               <SearchBar />
-              {/* <form className="search-bar" value="">
-                <input type="text" className="search" placeholder="search bar" />
-              </form> */}
             </li>
           </ul>
         </section>

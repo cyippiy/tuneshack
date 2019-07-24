@@ -58,22 +58,35 @@ class SearchBar extends React.Component{
         for(let el in this.state.results){
             //checks if this is a user
             if (this.state.results[el].email){
-                results.push("found an artist")
+                results.push(`email id: ${el}`);
             }else if (this.state.results[el].album_id){
-                results.push("found a song")
+                results.push(`album_id: ${el}`);
             }else if (this.state.results[el].artist_id){
-                results.push("found an album")
+                results.push(`artist_id: ${el}`);
             }
         }
         console.table(results);
         return(
-            <div>
-                <form className="search-bar" value="">
-                    <input type="text" placeholder="Search for"
-                        ref={input => this.search = input}
-                        onChange={() => this.handleInputChange()} />
-                </form>
-            </div>
+            // <div className="search-bar-container">
+            <form className="search-bar" value="">
+                <input type="text" placeholder="Search for"
+                    ref={input => this.search = input}
+                    onChange={() => this.handleInputChange()} />
+
+                <ul className="results">
+                    <li>stuff</li>
+                    <li>stuff</li>
+                    <li>stuff</li>
+                    <li>stuff</li>
+                    <li>stuff</li>
+                    <li>stuff</li>
+                    <li>stuff</li>
+                    <li>stuff</li>
+                </ul>
+
+                    
+            </form>
+            // </div>
         )
     }
 }

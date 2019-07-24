@@ -5,6 +5,7 @@ import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import HomeContainer from '../home.jsx';
 import Img from 'react-image';
+// import Logo from '../../../app/assets/images/bandcamp.png'
 import SearchBar from '../search_bar/search_bar_container';
 
 

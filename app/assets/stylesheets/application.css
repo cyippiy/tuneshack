@@ -23,7 +23,7 @@
  }
 
  body{
-     font-family: 'Helvetica', sans-serif;
+     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
      background-color: #F0F0F0;
      height: 100%;
      margin: 0;
@@ -162,25 +162,59 @@ header{
 .nav-right-search{
   height: 50%;
   width: 100%;
-  /* background-color: purple; */
   float:left;
   display:flex;
-  /* flex-direction: row-reverse;; */
   justify-content: flex-end;
 }
+
+.auth-header-ul{
+  display:flex;
+  align-items: center;
+}
+
+
+.auth-header-li-search{
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.search-bar-container{
+  display:flex;
+  flex-direction: column;
+  /* align-self: flex-end; */
+}
+
 .search-bar{
-  /* justify-content: flex-end */
-  margin: auto 0;
-  display:inline-block;
-  align-content: flex-end;
-  color: grey;
-  /* cursor: not-allowed; */
-  text-align: center;
-  /* width:300px; */
+  color: #333;
+  background: #F3F3F3;
+  position: relative;
 }
 
 .search-bar > input[type="text"]:focus{
   width:400px;
+  color: #333;
+  z-index: 10;
+  background: #F3F3F3;
+  position:relative;
+}
+.results{
+  /* width:400px; */
+  align-self: flex-start;
+  background: #1DA0C3;
+  z-index:10;
+  display:flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.results:focus{
+  /* align-self: flex-end; */
+}
+
+.results li{
+  background: greenyellow;
 }
 
 .nav-right-links{
@@ -264,9 +298,10 @@ header{
 
 .auth-nav-bar{
   height: 50px;
-  background-color: #ececec;
+  background-color: white;
   justify-content: space-between;
   display:flex;
+  overflow: visible;
 }
 
 .user-profile-body{

@@ -45,7 +45,7 @@ class NavBar extends React.Component{
       display = (
         <ul className="nav-ul-right">
           <li>
-            <SearchBar />
+            {/* <SearchBar /> */}
           </li>
           <li>
             <Link to="/" className="btn">discover</Link>

@@ -46,11 +46,17 @@ class SearchBar extends React.Component{
     render(){
 
         let results = [];
-        if (this.state.results){
+        let className = "results";
+        if (this.state.query === ""){
+            results = [];
+        }else if (this.state.results){
+            if (Object.keys(this.state.results).length > 0){
+                className+= " results-active";
+            }
             for(let el in this.state.results){
                 //user
                 if (this.state.results[el].email){
-                    results.push(<li>
+                    results.push(<li key={el}>
                         <div><Link className="btn" to={`/artists/${this.state.results[el].id}`}>
                             Artist: {this.state.results[el].band_name ? this.state.results[el].band_name : this.state.results[el].email}
                             </Link>
@@ -58,7 +64,7 @@ class SearchBar extends React.Component{
                     </li>);
                 }else if (this.state.results[el].album_id){
                     //track song
-                    results.push(<li>
+                    results.push(<li key={el}>
                         <div><Link className="btn" to={`/albums/${this.state.results[el].album_id}`}>
                             Song: {this.state.results[el].title}
                         </Link>
@@ -67,7 +73,7 @@ class SearchBar extends React.Component{
 
                 }else if (this.state.results[el].artist_id){
                     //album
-                    results.push(<li>
+                    results.push(<li key={el}>
                         <div><Link className="btn" to={`/albums/${this.state.results[el].id}`}>
                             Album: {this.state.results[el].title}
                         </Link>
@@ -83,7 +89,7 @@ class SearchBar extends React.Component{
                     ref={input => this.search = input}
                     onChange={() => this.handleInputChange()} />
 
-                <ul className="results">
+                <ul className={className}>
                     {results}
                 </ul>
 

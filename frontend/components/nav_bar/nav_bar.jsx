@@ -45,6 +45,9 @@ class NavBar extends React.Component{
       display = (
         <ul className="nav-ul-right">
           <li>
+            <SearchBar />
+          </li>
+          <li>
             <Link to="/" className="btn">discover</Link>
           </li>
           <li>
@@ -99,10 +102,7 @@ class NavBar extends React.Component{
 
           <section className="nav-right">
             <section className="nav-right-search">
-              {/* <form className="search-bar" value="">
-                <input type="text" placeholder="search bar"></input>
-              </form> */}
-              <SearchBar />
+
             </section>
 
             <section className="nav-right-links">

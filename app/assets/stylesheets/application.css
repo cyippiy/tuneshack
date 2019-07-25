@@ -147,7 +147,7 @@ header{
 
 .nav-right{
   height: 100%;
-  width: 30%;
+  width: 50%;
   display: flex;
   float: left;
   /* position: relative; */
@@ -165,6 +165,8 @@ header{
   float:left;
   display:flex;
   justify-content: flex-end;
+  position: relative;
+  align-items: center;
 }
 
 .auth-header-ul{
@@ -188,33 +190,50 @@ header{
 
 .search-bar{
   color: #333;
-  background: #F3F3F3;
+  /* background: #F3F3F3; */
   position: relative;
+  height: 20px;
+  width: 300px;
 }
 
-.search-bar > input[type="text"]:focus{
+.search-bar input{
+  width: 300px;
+  height: 17px;
+}
+
+/* .search-bar > input[type="text"]:focus{
   width:400px;
+  height: 20px;
   color: #333;
   z-index: 10;
   background: #F3F3F3;
   position:relative;
-}
+} */
 .results{
-  /* width:400px; */
   align-self: flex-start;
-  background: #1DA0C3;
   z-index:10;
   display:flex;
   flex-direction: column;
+  margin-left: 10px;
   position: absolute;
 }
 
-.results:focus{
-  /* align-self: flex-end; */
+.results li{
+  background: white;
+  width:300px;
 }
 
-.results li{
-  background: greenyellow;
+.results li div{
+  border-radius: 1px solid black;
+  z-index: 10;
+  border-radius: 1px solid black;
+}
+
+.results li div a{
+  color: black;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  text-align: center;
 }
 
 .nav-right-links{
@@ -607,20 +626,20 @@ header{
   height: 33%;
   background:no-repeat center/100% url("https://i.ytimg.com/vi/XsKL_OqroAw/maxresdefault.jpg");
   opacity: 0.9;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .box-right2{
   height: 33%;
   background:no-repeat center/100% url("http://www.brunomars.com//sites/g/files/g2000006216/f/201611/BrunoMars_Site_NewSite_Assets_FBOG.jpg");
   opacity: 0.9;
-  z-index: 1;
+  /* z-index: 1; */
 }
 .box-right3{
   height: 33%;
   background:no-repeat top/100% url("https://pbs.twimg.com/media/DoROjrRWkAEF_zG.jpg");
   opacity: 0.9;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .box-right3:hover {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class SearchBar extends React.Component{
     constructor(props){
@@ -21,7 +22,6 @@ class SearchBar extends React.Component{
         if (this.state.query){
             if (this.state.query !== ""){
                 if (this.props){
-                    // console.log(`searching ${this.state.query}`);
                     this.props.searchResults(this.state.query)
                         .then(res=>{
                             this.setState({results: res.results});
@@ -29,43 +29,53 @@ class SearchBar extends React.Component{
                 }
             }
         }
-        // console.table(results);
     }
 
     handleInputChange() {
         if (this.state.typingTimeout){
             clearTimeout(this.state.typingTimeout);
         }
-        // this.searchAll();
         this.setState({
             query: this.search.value,
             typingTimeout: this.timer=setTimeout(() => {
                 this.searchAll()
             },100)
         });
-        // if(this.timer) clearTimeout(this.timer);
-        // this.timer = setTimeout(()=>{
-        //     this.searchAll();
-        // },100);
-
-
     }
 
     render(){
 
         let results = [];
-        if (this.state.results)
-        for(let el in this.state.results){
-            //checks if this is a user
-            if (this.state.results[el].email){
-                results.push(`email id: ${el}`);
-            }else if (this.state.results[el].album_id){
-                results.push(`album_id: ${el}`);
-            }else if (this.state.results[el].artist_id){
-                results.push(`artist_id: ${el}`);
+        if (this.state.results){
+            for(let el in this.state.results){
+                //user
+                if (this.state.results[el].email){
+                    results.push(<li>
+                        <div><Link className="btn" to={`/artists/${this.state.results[el].id}`}>
+                            Artist: {this.state.results[el].band_name ? this.state.results[el].band_name : this.state.results[el].email}
+                            </Link>
+                        </div>
+                    </li>);
+                }else if (this.state.results[el].album_id){
+                    //track song
+                    results.push(<li>
+                        <div><Link className="btn" to={`/albums/${this.state.results[el].album_id}`}>
+                            Song: {this.state.results[el].title}
+                        </Link>
+                        </div>
+                    </li>);
+
+                }else if (this.state.results[el].artist_id){
+                    //album
+                    results.push(<li>
+                        <div><Link className="btn" to={`/albums/${this.state.results[el].id}`}>
+                            Album: {this.state.results[el].title}
+                        </Link>
+                        </div>
+                    </li>);
+                }
             }
         }
-        console.table(results);
         return(
             // <div className="search-bar-container">
             <form className="search-bar" value="">
@@ -74,14 +84,7 @@ class SearchBar extends React.Component{
                     onChange={() => this.handleInputChange()} />
 
                 <ul className="results">
-                    <li>stuff</li>
-                    <li>stuff</li>
-                    <li>stuff</li>
-                    <li>stuff</li>
-                    <li>stuff</li>
-                    <li>stuff</li>
-                    <li>stuff</li>
-                    <li>stuff</li>
+                    {results}
                 </ul>
 
                     
